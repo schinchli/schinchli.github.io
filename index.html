@@ -222,6 +222,11 @@
     .hero::after { width: 320px; height: 320px; }
     .photo-ring { padding: 4px; }
   }
+  .talk h3 { font-size: 1rem; }
+  .talk-links { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .talk-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .8rem; font-weight: 600; padding: .28rem .65rem; border-radius: 999px;
+    border: 1px solid var(--bs-border-color); background: var(--bs-body-bg); text-decoration: none; transition: border-color .15s, color .15s; }
+  .talk-link:hover { border-color: var(--bs-primary); }
 </style>
 </head>
 <body>
@@ -273,7 +278,7 @@
     <div class="row g-3 mt-4">
       <div class="col-6 col-lg-3"><div class="stat"><div class="num">14+ yrs</div><div class="lbl">cloud, security and platform engineering</div></div></div>
       <div class="col-6 col-lg-3"><div class="stat"><div class="num">30+</div><div class="lbl">talks, workshops and webcasts</div></div></div>
-      <div class="col-6 col-lg-3"><div class="stat"><div class="num">13 / 13</div><div class="lbl">AWS certifications · Golden Jacket</div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat"><div class="num">12</div><div class="lbl">active AWS certifications · all 13 earned · Golden Jacket</div></div></div>
       <div class="col-6 col-lg-3"><div class="stat"><div class="num">4.8 / 5</div><div class="lbl">CSAT as an AWS Authorized Instructor</div></div></div>
     </div>
   </div>
@@ -338,81 +343,159 @@
   <div class="container">
     <div class="eyebrow mb-2">Speaking</div>
     <h2 class="section-title mb-2">Talks, workshops and webcasts</h2>
-    <p class="lead-muted mb-4">From community days to company webcasts, newest first. Click any card for the event page or recording.</p>
-
-    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-4 mb-3" style="letter-spacing:.08em">GitLab webcasts</h3>
+    <p class="lead-muted mb-4">AWS Summits, community days, user groups and webcasts, newest first. Each card links to the event's own page, plus a recording or post where there is one.</p>
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-4 mb-3" style="letter-spacing:.08em">Upcoming</h3>
     <div class="row g-3">
-      <div class="col-md-6"><a class="card-x p-4 h-100" href="https://page.gitlab.com/webcasts-jun17-gitlab-duo-agent-platform-apac.html">
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">10 Oct 2026 · Ahmedabad</div>
+        <h3>AWS Community Day Ahmedabad, DevOps Edition</h3>
+        <p class="mb-2">Rescheduled from July.</p>
+        <div class="mb-3"><span class="pill lead-role">Announced speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/ahmedabad-amazon-aws-cloud-meetup/events/314814953/"><i class="bi bi-calendar-event"></i>Event page</a> <a class="talk-link" href="https://www.linkedin.com/posts/awsahmedabadcommunity_aws-devopsedition2026-awsome-activity-7467855093321863168-86vP"><i class="bi bi-linkedin"></i>Announcement</a></div>
+      </div></div>
+    </div>
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">2026</h3>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">19 Sep 2026 · Bangalore</div>
+        <h3>Building the Memory Layer for AI Agents</h3>
+        <p class="mb-2">Yugabyte workshop, Bangalore YugabyteDB User Group. Presented the Amazon Bedrock segment.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/bangalore-yugabytedb-user-group/events/316349639/"><i class="bi bi-calendar-event"></i>Event page</a> <a class="talk-link" href="https://www.linkedin.com/posts/sidharth-5ba087172_buildwithyb-meko-workshop-activity-7509313531692089344-I2-G"><i class="bi bi-linkedin"></i>Post</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">11 Jul 2026 · Bengaluru</div>
+        <h3>Show Me Your Architecture track</h3>
+        <p class="mb-2">AWS Community Day Bengaluru 2026.</p>
+        <div class="mb-3"><span class="pill lead-role">Co-host</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.linkedin.com/posts/awsugblr_acdblr26-acdblr26-systemdesign-activity-7480614316925227008-ZGcS"><i class="bi bi-linkedin"></i>Post</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">17 Jun 2026 · Online · APAC</div>
         <h3>Duo Agent Platform in Action</h3>
-        <p class="mb-2">Live technical demo and Q&amp;A on bringing agentic AI into every stage of the software lifecycle.</p>
-        <span class="pill lead-role">Presenter</span> <span class="pill">with Satyam Bhardwaj</span></a></div>
-      <div class="col-md-6"><a class="card-x p-4 h-100" href="https://page.gitlab.com/webcasts-may14-gitops-in-action-apac.html">
+        <p class="mb-2">GitLab APAC webcast: a live technical demo and Q&amp;A on agentic AI across the software lifecycle.</p>
+        <div class="mb-3"><span class="pill lead-role">Presenter</span> <span class="pill">with Satyam Bhardwaj</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://page.gitlab.com/webcasts-jun17-gitlab-duo-agent-platform-apac.html"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">Jun 2026 · Mumbai</div>
+        <h3>GitLab Duo Agent Platform × Amazon Bedrock workshop</h3>
+        <p class="mb-2">Hands-on workshop for engineering teams.</p>
+        <div class="mb-3"><span class="pill lead-role">Co-lead</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.linkedin.com/posts/kayleefung_gitlab-gitlabduo-awsbedrock-activity-7472112757203599360-ry1J"><i class="bi bi-linkedin"></i>Post</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">28 May 2026 · Mumbai</div>
+        <h3>GitLab Duo Agent Platform on Amazon Bedrock</h3>
+        <p class="mb-2">AWS Summit Mumbai, PRT102-S lightning talk.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://registration.awsevents.com/flow/awsevents/summitbom26/publiceventcatalog/page/publicsessioncatalog?search=Chinchli"><i class="bi bi-journal-text"></i>Session catalog</a> <a class="talk-link" href="https://aws.amazon.com/events/summits/mumbai/"><i class="bi bi-globe2"></i>Summit site</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">17 May 2026 · Bhopal</div>
+        <h3>Building Production-Ready GenAI Apps using Amazon Bedrock</h3>
+        <p class="mb-2">AWS User Group Bhopal meetup.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/aws-user-group-bhopal/events/314584960/"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">16 May 2026 · Indore</div>
+        <h3>From Amazon Bedrock to Agents: Building Real GenAI Systems on AWS</h3>
+        <p class="mb-2">AWS User Group Indore relaunch day. I also co-hosted the relaunch meetup as a co-organizer.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span> <span class="pill">Co-organizer</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/aws-user-group-indore/events/314696650/"><i class="bi bi-calendar-event"></i>Event page</a> <a class="talk-link" href="https://www.meetup.com/aws-user-group-indore/events/314628984/"><i class="bi bi-people"></i>Relaunch meetup</a> <a class="talk-link" href="https://www.awsugindore.in/"><i class="bi bi-people"></i>AWS UG Indore</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">14 May 2026 · Online · APAC</div>
-        <h3>GitOps in Action: Automating Kubernetes Workflows</h3>
-        <p class="mb-2">Pull-based GitOps, GitOps workflows for OCI images, and a live demo assisted by GitLab Duo.</p>
-        <span class="pill lead-role">Speaker</span></a></div>
+        <h3>GitOps in Action: Automating Kubernetes Workflows with GitLab</h3>
+        <p class="mb-2">GitLab APAC tech demo: pull-based GitOps and GitOps workflows for OCI images.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://page.gitlab.com/webcasts-may14-gitops-in-action-apac.html"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">23 Apr 2026 · Bengaluru</div>
+        <h3>How I Built an AI Agent as My AWS Architect: Cost &amp; Best Practices</h3>
+        <p class="mb-2">AWS Summit Bengaluru, DEV114, Developer Community Zone.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://registration.awsevents.com/flow/awsevents/summitblr26/publiceventcatalog/page/publicsessioncatalog?search=Chinchli"><i class="bi bi-journal-text"></i>Session catalog</a> <a class="talk-link" href="https://aws.amazon.com/events/summits/bengaluru/"><i class="bi bi-globe2"></i>Summit site</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">22 Apr 2026 · Bengaluru</div>
+        <h3>Accelerating Innovation with GitLab DAP powered by Amazon Bedrock</h3>
+        <p class="mb-2">AWS Summit Bengaluru, PRT103-S lightning talk, plus GitLab booth demos.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://registration.awsevents.com/flow/awsevents/summitblr26/publiceventcatalog/page/publicsessioncatalog?search=Chinchli"><i class="bi bi-journal-text"></i>Session catalog</a> <a class="talk-link" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-amazonbedrock-activity-7453233109866565632-FmcN"><i class="bi bi-linkedin"></i>Post</a></div>
+      </div></div>
     </div>
-
-    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">AWS community events and workshops</h3>
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">2025 and earlier</h3>
     <div class="row g-3">
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://community.wwktm.com/t/workshop-building-chatbots-with-amazon-bedrock-knowledge-bases-and-agents/40">
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">13 Dec 2025 · Kathmandu</div>
         <h3>Building Chatbots with Amazon Bedrock Knowledge Bases and Agents</h3>
-        <p class="mb-2">Half-day workshop for AWS User Group Women in Tech Nepal and Web Weekend Kathmandu.</p>
-        <span class="pill lead-role">Workshop lead</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=6GJMoxCP5L4">
+        <p class="mb-2">Hands-on workshop for AWS User Group Women in Tech Nepal and Web Weekend Kathmandu.</p>
+        <div class="mb-3"><span class="pill lead-role">Workshop lead</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/women-awsugnepal/events/312206661/"><i class="bi bi-calendar-event"></i>Event page</a> <a class="talk-link" href="https://community.wwktm.com/t/workshop-building-chatbots-with-amazon-bedrock-knowledge-bases-and-agents/40"><i class="bi bi-chat-dots"></i>Community page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">25 Nov 2025 · Online</div>
-        <h3>Building a Content Summarizer with Amazon Bedrock</h3>
-        <p class="mb-2">AI for Bharat, Workshop 1: a hands-on GenAI summarization build.</p>
-        <span class="pill lead-role">Workshop lead</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=BY4YlxhSKr8">
+        <h3>Building a content summarizer using Amazon Bedrock</h3>
+        <p class="mb-2">AI for Bharat, Workshop 1.</p>
+        <div class="mb-3"><span class="pill lead-role">Workshop lead</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.youtube.com/watch?v=6GJMoxCP5L4"><i class="bi bi-play-circle"></i>Recording</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">22 Jan 2025 · Online</div>
-        <h3>A Beginner's Guide to Amazon Bedrock, Knowledge Bases, Guardrails and Security</h3>
-        <p class="mb-2">BeSA Cloud Academy: Bedrock foundations, retrieval with Knowledge Bases, and Guardrails.</p>
-        <span class="pill lead-role">Lead presenter</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=4xi_btH4LBw">
+        <h3>A beginners guide to Amazon Bedrock, Amazon Bedrock Knowledge Bases, Guardrails and Security</h3>
+        <p class="mb-2">BeSA Cloud Academy session.</p>
+        <div class="mb-3"><span class="pill lead-role">Lead presenter</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.youtube.com/watch?v=BY4YlxhSKr8"><i class="bi bi-play-circle"></i>Recording</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
+        <div class="when mb-1">11 May 2024 · Mumbai</div>
+        <h3>Let's Innovate with Amazon Q</h3>
+        <p class="mb-2">AWS User Group Mumbai, in person.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/awsugmum/events/300774049/"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">6 Apr 2024 · Mumbai</div>
-        <h3>Enhancing Your Cloud Security Posture with Generative AI</h3>
-        <p class="mb-2">AWS Community Day Mumbai: GenAI plus a security data lake for threat analysis.</p>
-        <span class="pill lead-role">Co-speaker</span> <span class="pill">with Ravindra Ved</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://wpthane.in/workshop-wordpress-security-101-protecting-your-website-like-a-pro/">
+        <h3>Enhancing your Cloud Security Posture with GenAI</h3>
+        <p class="mb-2">AWS Community Day Mumbai 2024, Track 2.</p>
+        <div class="mb-3"><span class="pill lead-role">Co-speaker</span> <span class="pill">with Ravindra Ved</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://acd.awsugmum.in/dev-page-acd/"><i class="bi bi-globe2"></i>Event site</a> <a class="talk-link" href="https://www.youtube.com/watch?v=4xi_btH4LBw"><i class="bi bi-play-circle"></i>Recording</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">10 Jun 2023 · Thane</div>
         <h3>WordPress Security 101: Protecting Your Website Like a Pro</h3>
-        <p class="mb-2">Hands-on workshop at the WordPress Thane meetup.</p>
-        <span class="pill lead-role">Speaker</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://awsughyd.com/acd/">
+        <p class="mb-2">WordPress Thane meetup workshop.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/thane-wordpress-meetup/events/293955014/"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">18 Mar 2023 · Hyderabad</div>
         <h3>Fortifying the Cloud: Essential Security Strategies to Protect Resources</h3>
         <p class="mb-2">AWS Community Day Hyderabad 2023, Track 2.</p>
-        <span class="pill lead-role">Co-speaker</span> <span class="pill">with Medha Shree</span></a></div>
-      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=5banQvHheMM">
+        <div class="mb-3"><span class="pill lead-role">Co-speaker</span> <span class="pill">with Medha Shree</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://awsughyd.com/acd/"><i class="bi bi-globe2"></i>Event site</a> <a class="talk-link" href="https://www.meetup.com/awsughyd/events/291652439/"><i class="bi bi-calendar-event"></i>Event page</a></div>
+      </div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x talk p-4 h-100 d-flex flex-column">
         <div class="when mb-1">11 Mar 2023 · Online</div>
-        <h3>Security on the Cloud, Session 1: Overview of Security on Cloud</h3>
-        <p class="mb-2">AWS User Group Mumbai series: incidents, NIST and MITRE frameworks, shared responsibility.</p>
-        <span class="pill lead-role">Speaker</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
+        <h3>Overview of Security on the Cloud</h3>
+        <p class="mb-2">AWS User Group Mumbai Security Series, Session 1.</p>
+        <div class="mb-3"><span class="pill lead-role">Speaker</span></div>
+        <div class="talk-links mt-auto"><a class="talk-link" href="https://www.meetup.com/awsugmum/events/292065278/"><i class="bi bi-calendar-event"></i>Event page</a> <a class="talk-link" href="https://www.youtube.com/watch?v=5banQvHheMM"><i class="bi bi-play-circle"></i>Recording</a></div>
+      </div></div>
     </div>
-
-    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-2" style="letter-spacing:.08em">More appearances</h3>
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">Also spoke at</h3>
     <ul class="list-unstyled more-list card-x px-4 py-2 mb-0">
-      <li><span class="when">25 Jul 2026</span><span><strong>AWS Community Day Ahmedabad 2026</strong>, DevOps edition · Speaker <a class="small ms-1" href="https://www.linkedin.com/posts/awsahmedabadcommunity_aws-devopsedition2026-awsome-activity-7467855093321863168-86vP"><i class="bi bi-linkedin"></i> post</a></span></li>
-      <li><span class="when">May – Jun 2026</span><span><strong>Two AWS Summits in 30 days</strong> · Lightning talks and booth demos <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
-      <li><span class="when">May – Jun 2026</span><span><strong>AWS User Group Bhopal</strong> · Speaker <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
-      <li><span class="when">2025</span><span><strong>AWS Summit 2025</strong>, Developer Lounge · Speaker on cloud architecture and new AWS services</span></li>
-      <li><span class="when">2025</span><span><strong>Amazon Bedrock AgentCore hands-on workshop</strong> · Taking local AI agents to production with deployment, security and extension building blocks</span></li>
-      <li><span class="when">4 Mar 2024</span><span><strong>AWS Cloud Club CHARUSAT</strong>, Infrastructure Camp · Speaker</span></li>
-      <li><span class="when">4 Nov 2023</span><span><strong>AWS Community Day Vadodara</strong> · Introducing Amazon Security Lake for centralized security analytics</span></li>
+      <li><span class="when">2025</span><span><strong>AWS Summit 2025</strong>, Developer Lounge · Cloud architecture and new AWS services</span></li>
+      <li><span class="when">2025</span><span><strong>Amazon Bedrock AgentCore hands-on workshop</strong> · Taking local AI agents to production</span></li>
+      <li><span class="when">4 Mar 2024</span><span><strong>AWS Cloud Club CHARUSAT</strong>, Infrastructure Camp</span></li>
+      <li><span class="when">4 Nov 2023</span><span><strong>AWS Community Day Vadodara</strong> · Introducing Amazon Security Lake</span></li>
       <li><span class="when">2023</span><span><strong>AWS Community Day Nashik</strong> · Cloud and DevOps talk</span></li>
-    </ul>
-
-    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-2" style="letter-spacing:.08em">Community and events</h3>
-    <ul class="list-unstyled more-list card-x px-4 py-2 mb-0">
-      <li><span class="when">2026</span><span><strong>AWS User Group Indore</strong> · Re-launched the user group as organizer <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
-      <li><span class="when">Sep 2022</span><span><strong>AWS APJC Tech Summit 2022</strong>, Singapore · Workshops and tech-builder gyms <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_hereataws-aws-awssummit2022-activity-6974247233852456960-a2v8"><i class="bi bi-linkedin"></i> post</a></span></li>
     </ul>
   </div>
 </section>
-
 
 <!-- FORMATS -->
 <section id="formats" class="block">
@@ -535,14 +618,14 @@
       <div class="col-lg-5">
         <div class="eyebrow mb-2">Credentials</div>
         <h2 class="section-title mb-3">Every AWS certification, and then some</h2>
-        <p class="lead-muted mb-4">All 13 AWS certifications, recognized with the AWS Golden Jacket, plus Azure Solutions Architect Expert, Google Cloud and Cloud Security Alliance credentials.</p>
+        <p class="lead-muted mb-4">Earned all 13 AWS certifications and the AWS Golden Jacket; 12 are active today, including Generative AI Developer – Professional (2026). Plus Google Cloud and Cloud Security Alliance credentials.</p>
         <a class="btn btn-outline-primary" href="https://www.credly.com/users/shashank-chinchli"><i class="bi bi-patch-check me-2"></i>Verify on Credly</a>
       </div>
       <div class="col-lg-7">
         <div class="row g-3">
-          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Professional &amp; Specialty</div><p class="mb-0">Solutions Architect Pro · DevOps Engineer Pro · Security · Advanced Networking · Machine Learning · Database</p></div></div>
-          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Associate &amp; Foundational</div><p class="mb-0">Solutions Architect · Developer · SysOps · Data Engineer · ML Engineer · AI Practitioner · Cloud Practitioner</p></div></div>
-          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Microsoft Azure</div><p class="mb-0">Solutions Architect Expert · Administrator Associate · Security, Data and Azure Fundamentals</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Professional &amp; Specialty</div><p class="mb-0">Generative AI Developer Pro · DevOps Engineer Pro · Security · Advanced Networking · Machine Learning · Database</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Associate &amp; Foundational</div><p class="mb-0">Developer · SysOps · Data Engineer · ML Engineer · AI Practitioner · Cloud Practitioner</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Earlier (lapsed)</div><p class="mb-0">AWS Solutions Architect Associate &amp; Professional · Azure Solutions Architect Expert · Azure Administrator</p></div></div>
           <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Google Cloud &amp; industry</div><p class="mb-0">Generative AI Leader · Cloud Digital Leader · CCSK v4 (Cloud Security Alliance)</p></div></div>
         </div>
       </div>
