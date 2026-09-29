@@ -147,6 +147,81 @@
     .cta { padding: 2rem 1.25rem; }
     .more-list li { flex-direction: column; gap: .1rem; }
   }
+
+  /* ---- visual polish: gradients, depth, rhythm ---- */
+  :root, [data-bs-theme="light"] {
+    --g1: #0e6e63; --g2: #1f6fb2; --g3: #7c4dff;
+    --grad: linear-gradient(120deg, var(--g1) 0%, var(--g2) 55%, var(--g3) 100%);
+    --glow-a: rgba(14,110,99,.18); --glow-b: rgba(124,77,255,.14); --glow-c: rgba(31,111,178,.14);
+    --card-shadow: 0 1px 2px rgba(16,24,40,.04), 0 8px 24px -12px rgba(16,24,40,.12);
+    --alt-bg: #f1f3f1;
+  }
+  [data-bs-theme="dark"] {
+    --g1: #5fc9b8; --g2: #6aa8ff; --g3: #b39dff;
+    --glow-a: rgba(95,201,184,.16); --glow-b: rgba(179,157,255,.14); --glow-c: rgba(106,168,255,.12);
+    --card-shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px -14px rgba(0,0,0,.6);
+    --alt-bg: #16181b;
+  }
+  body { overflow-x: hidden; }
+  .hero { position: relative; isolation: isolate; overflow: hidden; }
+  .hero::before, .hero::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(70px); pointer-events: none; }
+  .hero::before { width: 560px; height: 560px; top: -220px; right: -140px; background: radial-gradient(circle, var(--glow-b), transparent 70%); }
+  .hero::after { width: 520px; height: 520px; bottom: -260px; left: -160px; background: radial-gradient(circle, var(--glow-a), transparent 70%); }
+  .hero .container { position: relative; }
+  .hero-grid-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+    background-image: linear-gradient(var(--bs-border-color) 1px, transparent 1px), linear-gradient(90deg, var(--bs-border-color) 1px, transparent 1px);
+    background-size: 44px 44px; mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%); }
+  .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .photo-ring { display: inline-block; padding: 5px; border-radius: 50%; background: var(--grad); box-shadow: 0 24px 50px -24px var(--g2); }
+  .photo-ring .hero-photo { border: 5px solid var(--bs-body-bg); box-shadow: none; }
+  .badge-live { display: inline-flex; align-items: center; gap: .45rem; font-size: .8rem; font-weight: 600; padding: .3rem .75rem; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--bs-border-color); box-shadow: var(--card-shadow); }
+  .badge-live .dot-live { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.18); }
+  .btn-primary { background-image: var(--grad); border: 0; box-shadow: 0 10px 24px -12px var(--g2); }
+  .btn-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  [data-bs-theme="dark"] .btn-primary { color: #0d1413; }
+  .btn { transition: transform .15s ease, filter .15s ease, box-shadow .15s ease; }
+
+  .stat { position: relative; box-shadow: var(--card-shadow); overflow: hidden; }
+  .stat::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: var(--grad); }
+  .stat .num { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .card-x { box-shadow: var(--card-shadow); position: relative; }
+  a.card-x::after, .card-x.hoverable::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px;
+    background: var(--grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+    opacity: 0; transition: opacity .2s ease; pointer-events: none; }
+  a.card-x:hover::after { opacity: 1; }
+  a.card-x:hover { border-color: transparent; }
+  .icon-tile { background: linear-gradient(135deg, var(--soft), color-mix(in srgb, var(--g3) 14%, var(--surface))); }
+
+  section.block:nth-of-type(even) { background: var(--alt-bg); }
+  section.block { border-top: 0; }
+  .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .eyebrow { display: inline-block; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  .exp::before { background: linear-gradient(var(--g1), var(--g3)); opacity: .45; }
+  .exp-item::before { border-color: var(--g2); }
+  .exp-item.current::before { background: var(--grad); border-color: transparent; box-shadow: 0 0 0 4px var(--glow-c); }
+
+  .cta { position: relative; overflow: hidden; isolation: isolate;
+    background: linear-gradient(120deg, #0b5f56 0%, #1a5aa0 55%, #5b3fd0 100%); box-shadow: 0 30px 60px -30px rgba(26,90,160,.6); }
+  .cta::before { content: ""; position: absolute; z-index: -1; width: 460px; height: 460px; right: -120px; top: -180px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.18), transparent 65%); }
+  .cta::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .12;
+    background-image: radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px); background-size: 22px 22px; }
+  .cta .eyebrow { background: none; -webkit-background-clip: initial; background-clip: initial; color: #cdeee8 !important; }
+  .cta ul li { display: flex; gap: .5rem; align-items: flex-start; }
+  .cta ul li i { color: #bff0e7; }
+
+  .navbar.scrolled { box-shadow: 0 8px 24px -18px rgba(0,0,0,.35); }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+  @media (max-width: 767.98px) {
+    .hero::before { width: 340px; height: 340px; right: -160px; }
+    .hero::after { width: 320px; height: 320px; }
+    .photo-ring { padding: 4px; }
+  }
 </style>
 </head>
 <body>
@@ -175,14 +250,15 @@
 
 <!-- HERO -->
 <header class="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="row align-items-center g-4 g-lg-5">
       <div class="col-md-auto text-center">
-        <img class="hero-photo" src="img/shashank-chinchli.jpg" width="220" height="220" alt="Portrait of Shashank Chinchli">
+        <span class="photo-ring"><img class="hero-photo" src="img/shashank-chinchli.jpg" width="220" height="220" alt="Portrait of Shashank Chinchli"></span>
       </div>
       <div class="col-md">
-        <div class="eyebrow mb-2">Cloud architect · Speaker · Trainer</div>
-        <h1 class="display-4 display-name mb-2">Shashank Chinchli</h1>
+        <div class="d-flex flex-wrap gap-2 align-items-center mb-3"><span class="badge-live"><span class="dot-live"></span>Open to speaking in 2026–27</span><span class="eyebrow">Cloud architect · Speaker · Trainer</span></div>
+        <h1 class="display-4 display-name mb-2">Shashank <span class="grad-text">Chinchli</span></h1>
         <p class="role-line mb-3"><strong>Senior Solutions Architect at GitLab</strong><span class="dot">·</span>Ex-Solutions Architect at AWS</p>
         <p class="lead-muted mb-4">14+ years helping engineering teams ship secure, scalable software on the cloud. I turn hard topics, from agentic AI to cloud security posture and GitOps, into talks and hands-on workshops people can use the next morning.</p>
         <div class="d-flex flex-wrap gap-2">
@@ -206,7 +282,7 @@
 <!-- EXPERIENCE -->
 <section id="experience" class="block">
   <div class="container">
-    <div class="row g-5">
+    <div class="row g-4 g-lg-5">
       <div class="col-lg-4">
         <div class="eyebrow mb-2">Industry experience</div>
         <h2 class="section-title mb-3">Built in the field, not just on slides</h2>
@@ -508,6 +584,13 @@
         if (c.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(c).hide();
       });
     });
+    var nav = document.querySelector('.navbar');
+    function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('section.block .row > [class*="col"], section.block .exp-item, .more-list').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+    }
   })();
 </script>
 </body>
