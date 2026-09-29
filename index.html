@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shashank Chinchli · Senior Solutions Architect at GitLab, ex-AWS · Speaker</title>
+<meta name="description" content="Shashank Chinchli is a Senior Solutions Architect at GitLab and former Solutions Architect at AWS. 14+ years in cloud, security, GenAI and DevSecOps. Talks, workshops, articles and videos. Invite him to speak.">
+<meta name="author" content="Shashank Chinchli">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://schinchli.github.io/">
+<link rel="icon" href="img/shashank-chinchli-256.jpg">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Shashank Chinchli">
+<meta property="og:title" content="Shashank Chinchli · Senior Solutions Architect at GitLab, ex-AWS">
+<meta property="og:description" content="14+ years in cloud, security, GenAI and DevSecOps. Talks, workshops, articles and videos. Invite him to speak.">
+<meta property="og:url" content="https://schinchli.github.io/">
+<meta property="og:image" content="https://schinchli.github.io/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shashank Chinchli, Senior Solutions Architect at GitLab, ex-AWS">
+<meta property="profile:first_name" content="Shashank">
+<meta property="profile:last_name" content="Chinchli">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shashank Chinchli · Senior Solutions Architect at GitLab, ex-AWS">
+<meta name="twitter:description" content="14+ years in cloud, security, GenAI and DevSecOps. Talks, workshops, articles and videos.">
+<meta name="twitter:image" content="https://schinchli.github.io/img/og.jpg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://schinchli.github.io/",
+  "dateModified": "2026-09-29",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://schinchli.github.io/#person",
+    "name": "Shashank Chinchli",
+    "givenName": "Shashank",
+    "familyName": "Chinchli",
+    "jobTitle": "Senior Solutions Architect",
+    "description": "Senior Solutions Architect at GitLab and former Solutions Architect at AWS; speaker and trainer on cloud, security, GenAI and DevSecOps.",
+    "worksFor": { "@type": "Organization", "name": "GitLab" },
+    "alumniOf": [
+      { "@type": "Organization", "name": "Amazon Web Services" },
+      { "@type": "Organization", "name": "KPMG India" },
+      { "@type": "CollegeOrUniversity", "name": "Gujarat University" }
+    ],
+    "image": "https://schinchli.github.io/img/shashank-chinchli.jpg",
+    "url": "https://schinchli.github.io/",
+    "homeLocation": { "@type": "Place", "name": "India" },
+    "knowsAbout": ["Cloud architecture", "Cloud security", "Generative AI", "Agentic AI", "Amazon Bedrock", "DevSecOps", "GitOps", "Kubernetes", "Infrastructure as Code"],
+    "knowsLanguage": ["en", "hi", "kn", "gu", "mr"],
+    "sameAs": [
+      "https://www.linkedin.com/in/shashankk/",
+      "https://github.com/schinchli",
+      "https://gitlab.com/hey.shashank",
+      "https://builder.aws.com/community/@heyshashank",
+      "https://www.youtube.com/@mr.cloudarchitect",
+      "https://www.credly.com/users/shashank-chinchli",
+      "https://topmate.io/heyshashank/",
+      "https://contributors.gitlab.com/users/hey.shashank"
+    ]
+  }
+}
+</script>
+
+<style>
+  :root, [data-bs-theme="light"] {
+    --bs-primary: #0e6e63; --bs-primary-rgb: 14,110,99;
+    --bs-link-color: #0e6e63; --bs-link-color-rgb: 14,110,99; --bs-link-hover-color: #0a5249;
+    --bs-body-bg: #f7f7f4; --bs-body-color: #1d1f24; --bs-secondary-color: #5d616b;
+    --bs-border-color: #e5e3dd; --surface: #ffffff; --soft: #e4f1ee;
+  }
+  [data-bs-theme="dark"] {
+    --bs-primary: #5fc9b8; --bs-primary-rgb: 95,201,184;
+    --bs-link-color: #5fc9b8; --bs-link-color-rgb: 95,201,184; --bs-link-hover-color: #8ddccf;
+    --bs-body-bg: #121316; --bs-body-color: #ecebe7; --bs-secondary-color: #a5a8af;
+    --bs-border-color: #2c2f34; --surface: #1a1c20; --soft: #1b2f2c;
+  }
+  body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bs-body-bg); }
+  html { scroll-padding-top: 72px; }
+  .btn-primary { --bs-btn-bg: var(--bs-primary); --bs-btn-border-color: var(--bs-primary); --bs-btn-hover-bg: #0a5249;
+    --bs-btn-hover-border-color: #0a5249; --bs-btn-active-bg: #0a5249; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; }
+  [data-bs-theme="dark"] .btn-primary { --bs-btn-color: #0d1413; --bs-btn-hover-color: #0d1413; --bs-btn-hover-bg: #8ddccf; --bs-btn-hover-border-color: #8ddccf; --bs-btn-active-bg: #8ddccf; }
+  .btn-outline-primary { --bs-btn-color: var(--bs-primary); --bs-btn-border-color: var(--bs-primary); --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary); --bs-btn-hover-color: #fff; }
+  .text-primary { color: var(--bs-primary) !important; }
+  .navbar { background: color-mix(in srgb, var(--bs-body-bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--bs-border-color); }
+  .navbar-brand { font-weight: 700; }
+  .nav-link { font-size: .92rem; color: var(--bs-secondary-color); }
+  .nav-link:hover, .nav-link.active { color: var(--bs-body-color); }
+
+  .hero { padding: 4.5rem 0 3rem; }
+  .hero-photo { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 6px solid var(--surface); box-shadow: 0 0 0 1px var(--bs-border-color), 0 20px 40px -20px rgba(0,0,0,.35); }
+  .eyebrow { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--bs-primary); }
+  .display-name { font-weight: 800; letter-spacing: -.03em; line-height: 1.02; }
+  .role-line { font-size: 1.2rem; }
+  .role-line .dot { color: var(--bs-secondary-color); margin: 0 .5rem; }
+
+  .stat { background: var(--surface); border: 1px solid var(--bs-border-color); border-radius: 1rem; padding: 1rem 1.2rem; height: 100%; }
+  .stat .num { font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .stat .lbl { color: var(--bs-secondary-color); font-size: .88rem; }
+
+  section.block { padding: 4rem 0; border-top: 1px solid var(--bs-border-color); }
+  .section-title { font-weight: 800; letter-spacing: -.02em; }
+  .lead-muted { color: var(--bs-secondary-color); max-width: 46rem; }
+
+  .card-x { background: var(--surface); border: 1px solid var(--bs-border-color); border-radius: 1rem; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  a.card-x, .card-x.hoverable { text-decoration: none; color: inherit; display: block; }
+  a.card-x:hover, .card-x.hoverable:hover { transform: translateY(-2px); border-color: var(--bs-primary); box-shadow: 0 14px 30px -18px rgba(0,0,0,.35); }
+  .card-x h3 { font-size: 1.02rem; font-weight: 650; line-height: 1.35; }
+  .card-x .when { font-size: .82rem; color: var(--bs-secondary-color); font-variant-numeric: tabular-nums; }
+  .card-x p { color: var(--bs-secondary-color); font-size: .93rem; }
+  .icon-tile { width: 44px; height: 44px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: var(--soft); color: var(--bs-primary); font-size: 1.25rem; flex: none; }
+  .pill { display: inline-block; font-size: .76rem; padding: .15rem .6rem; border-radius: 999px; background: var(--bs-tertiary-bg); color: var(--bs-secondary-color); border: 1px solid var(--bs-border-color); }
+  .pill.lead-role { background: var(--soft); color: var(--bs-primary); border-color: transparent; font-weight: 600; }
+
+  .exp { position: relative; padding-left: 1.75rem; }
+  .exp::before { content: ""; position: absolute; left: .45rem; top: .4rem; bottom: .4rem; width: 2px; background: var(--bs-border-color); }
+  .exp-item { position: relative; margin-bottom: 1.25rem; }
+  .exp-item::before { content: ""; position: absolute; left: -1.62rem; top: 1.35rem; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 3px solid var(--bs-primary); }
+  .exp-item.current::before { background: var(--bs-primary); }
+  .exp-item ul { color: var(--bs-secondary-color); font-size: .93rem; padding-left: 1.1rem; margin-bottom: 0; }
+  .exp-item li { margin-bottom: .2rem; }
+
+  .cta { background: linear-gradient(135deg, #0e6e63 0%, #164e63 100%); color: #fff; border-radius: 1.5rem; padding: 3rem; }
+  .cta .btn-light { font-weight: 600; }
+  .cta .text-white-75 { color: rgba(255,255,255,.8); }
+  .speaker-photos img { width: 88px; height: 88px; object-fit: cover; border-radius: 16px; border: 3px solid rgba(255,255,255,.35); }
+
+  .more-list li { padding: .6rem 0; border-bottom: 1px dashed var(--bs-border-color); display: flex; gap: 1rem; }
+  .more-list li:last-child { border-bottom: 0; }
+  .more-list .when { width: 7.5rem; flex: none; color: var(--bs-secondary-color); font-size: .88rem; }
+
+  footer { border-top: 1px solid var(--bs-border-color); color: var(--bs-secondary-color); font-size: .9rem; }
+  @media (max-width: 767.98px) {
+    .hero { padding: 2.5rem 0 2rem; text-align: center; }
+    .hero-photo { width: 150px; height: 150px; }
+    .hero .d-flex.flex-wrap { justify-content: center; }
+    .cta { padding: 2rem 1.25rem; }
+    .more-list li { flex-direction: column; gap: .1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Shashank Chinchli</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#speaking">Speaking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formats">Formats</a></li>
+        <li class="nav-item"><a class="nav-link" href="#writing">Writing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#open-source">Open source</a></li>
+        <li class="nav-item"><a class="nav-link" href="#credentials">Credentials</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-primary btn-sm px-3" href="#invite">Invite me to speak</a></li>
+        <li class="nav-item ms-lg-1"><button class="btn btn-sm btn-link nav-link" id="theme" type="button" aria-label="Toggle light or dark theme"><i class="bi bi-circle-half"></i></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-md-auto text-center">
+        <img class="hero-photo" src="img/shashank-chinchli.jpg" width="220" height="220" alt="Portrait of Shashank Chinchli">
+      </div>
+      <div class="col-md">
+        <div class="eyebrow mb-2">Cloud architect · Speaker · Trainer</div>
+        <h1 class="display-4 display-name mb-2">Shashank Chinchli</h1>
+        <p class="role-line mb-3"><strong>Senior Solutions Architect at GitLab</strong><span class="dot">·</span>Ex-Solutions Architect at AWS</p>
+        <p class="lead-muted mb-4">14+ years helping engineering teams ship secure, scalable software on the cloud. I turn hard topics, from agentic AI to cloud security posture and GitOps, into talks and hands-on workshops people can use the next morning.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary px-4" href="#invite"><i class="bi bi-mic me-2"></i>Invite me to speak</a>
+          <a class="btn btn-outline-primary px-4" href="#speaking"><i class="bi bi-play-circle me-2"></i>Watch my talks</a>
+          <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/shashankk/" rel="me" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="btn btn-outline-secondary" href="https://github.com/schinchli" rel="me" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a class="btn btn-outline-secondary" href="https://www.youtube.com/@mr.cloudarchitect" rel="me" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mt-4">
+      <div class="col-6 col-lg-3"><div class="stat"><div class="num">14+ yrs</div><div class="lbl">cloud, security and platform engineering</div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat"><div class="num">17+</div><div class="lbl">talks, workshops and webcasts</div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat"><div class="num">13 / 13</div><div class="lbl">AWS certifications · Golden Jacket</div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat"><div class="num">4.8 / 5</div><div class="lbl">CSAT as an AWS Authorized Instructor</div></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="block">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="eyebrow mb-2">Industry experience</div>
+        <h2 class="section-title mb-3">Built in the field, not just on slides</h2>
+        <p class="lead-muted">Every talk draws on work with enterprise teams: architecture reviews, migrations, security programs and AI workloads.</p>
+        <div class="d-grid gap-3 mt-4">
+          <div class="d-flex gap-3 align-items-start"><span class="icon-tile"><i class="bi bi-bank"></i></span><div><strong>Financial services</strong><div class="text-body-secondary small">Banking, payments and insurance, where security and compliance come first</div></div></div>
+          <div class="d-flex gap-3 align-items-start"><span class="icon-tile"><i class="bi bi-heart-pulse"></i></span><div><strong>Healthcare &amp; life sciences</strong><div class="text-body-secondary small">Regulated data, identity and multi-cloud security</div></div></div>
+          <div class="d-flex gap-3 align-items-start"><span class="icon-tile"><i class="bi bi-cpu"></i></span><div><strong>Technology &amp; digital natives</strong><div class="text-body-secondary small">Platform modernization, DevSecOps and GenAI adoption</div></div></div>
+          <div class="d-flex gap-3 align-items-start"><span class="icon-tile"><i class="bi bi-globe-asia-australia"></i></span><div><strong>India &amp; ASEAN</strong><div class="text-body-secondary small">Enterprise teams across the region</div></div></div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="exp">
+          <div class="exp-item current card-x p-4">
+            <div class="d-flex flex-wrap justify-content-between gap-2 mb-1"><h3 class="mb-0 fs-5">Senior Solutions Architect · GitLab</h3><span class="pill lead-role">Jan 2026 – present</span></div>
+            <ul class="mt-2">
+              <li>Guides enterprises across India and ASEAN through DevSecOps transformation: CI/CD, security scanning, compliance and GitOps.</li>
+              <li>Brings agentic AI into the software lifecycle with GitLab Duo Agent Platform.</li>
+              <li>Presents APAC technical webcasts on agentic AI and GitOps.</li>
+            </ul>
+          </div>
+          <div class="exp-item card-x p-4">
+            <div class="d-flex flex-wrap justify-content-between gap-2 mb-1"><h3 class="mb-0 fs-5">Solutions Architect II · Amazon Web Services</h3><span class="pill">May 2024 – Jan 2026</span></div>
+            <ul class="mt-2">
+              <li>Designed cloud architectures for enterprise customers in financial services, healthcare and technology.</li>
+              <li>Led Well-Architected reviews, migration assessments and AI/ML workload designs.</li>
+              <li>Ran Amazon Bedrock and GenAI workshops for developer communities.</li>
+            </ul>
+          </div>
+          <div class="exp-item card-x p-4">
+            <div class="d-flex flex-wrap justify-content-between gap-2 mb-1"><h3 class="mb-0 fs-5">Technical Trainer · Amazon Web Services</h3><span class="pill">Jul 2022 – May 2024</span></div>
+            <ul class="mt-2">
+              <li>Champion Authorized Instructor with a 4.8/5 CSAT, teaching architecture, security, machine learning and DevOps.</li>
+              <li>Trained hundreds of professionals; awarded the AWS Golden Jacket for holding all 13 AWS certifications.</li>
+            </ul>
+          </div>
+          <div class="exp-item card-x p-4">
+            <div class="d-flex flex-wrap justify-content-between gap-2 mb-1"><h3 class="mb-0 fs-5">Manager, Cloud Security Architect · KPMG India</h3><span class="pill">Feb 2021 – Jul 2022</span></div>
+            <ul class="mt-2">
+              <li>Led cloud security architecture and posture management for global enterprise clients.</li>
+              <li>Designed zero-trust, identity and compliance-automation programs across AWS, Azure and Google Cloud.</li>
+            </ul>
+          </div>
+          <p class="text-body-secondary small mt-3 mb-0"><i class="bi bi-mortarboard me-1"></i>BTech, Information Technology, Gujarat University · Lean Six Sigma Green Belt · Speaks English, Hindi, Kannada, Gujarati and Marathi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section id="speaking" class="block">
+  <div class="container">
+    <div class="eyebrow mb-2">Speaking</div>
+    <h2 class="section-title mb-2">Talks, workshops and webcasts</h2>
+    <p class="lead-muted mb-4">From community days to company webcasts, newest first. Click any card for the event page or recording.</p>
+
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-4 mb-3" style="letter-spacing:.08em">GitLab webcasts</h3>
+    <div class="row g-3">
+      <div class="col-md-6"><a class="card-x p-4 h-100" href="https://page.gitlab.com/webcasts-jun17-gitlab-duo-agent-platform-apac.html">
+        <div class="when mb-1">17 Jun 2026 · Online · APAC</div>
+        <h3>Duo Agent Platform in Action</h3>
+        <p class="mb-2">Live technical demo and Q&amp;A on bringing agentic AI into every stage of the software lifecycle.</p>
+        <span class="pill lead-role">Presenter</span> <span class="pill">with Satyam Bhardwaj</span></a></div>
+      <div class="col-md-6"><a class="card-x p-4 h-100" href="https://page.gitlab.com/webcasts-may14-gitops-in-action-apac.html">
+        <div class="when mb-1">14 May 2026 · Online · APAC</div>
+        <h3>GitOps in Action: Automating Kubernetes Workflows</h3>
+        <p class="mb-2">Pull-based GitOps, GitOps workflows for OCI images, and a live demo assisted by GitLab Duo.</p>
+        <span class="pill lead-role">Speaker</span></a></div>
+    </div>
+
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">AWS community events and workshops</h3>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://community.wwktm.com/t/workshop-building-chatbots-with-amazon-bedrock-knowledge-bases-and-agents/40">
+        <div class="when mb-1">13 Dec 2025 · Kathmandu</div>
+        <h3>Building Chatbots with Amazon Bedrock Knowledge Bases and Agents</h3>
+        <p class="mb-2">Half-day workshop for AWS User Group Women in Tech Nepal and Web Weekend Kathmandu.</p>
+        <span class="pill lead-role">Workshop lead</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=6GJMoxCP5L4">
+        <div class="when mb-1">25 Nov 2025 · Online</div>
+        <h3>Building a Content Summarizer with Amazon Bedrock</h3>
+        <p class="mb-2">AI for Bharat, Workshop 1: a hands-on GenAI summarization build.</p>
+        <span class="pill lead-role">Workshop lead</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=BY4YlxhSKr8">
+        <div class="when mb-1">22 Jan 2025 · Online</div>
+        <h3>A Beginner's Guide to Amazon Bedrock, Knowledge Bases, Guardrails and Security</h3>
+        <p class="mb-2">BeSA Cloud Academy: Bedrock foundations, retrieval with Knowledge Bases, and Guardrails.</p>
+        <span class="pill lead-role">Lead presenter</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=4xi_btH4LBw">
+        <div class="when mb-1">6 Apr 2024 · Mumbai</div>
+        <h3>Enhancing Your Cloud Security Posture with Generative AI</h3>
+        <p class="mb-2">AWS Community Day Mumbai: GenAI plus a security data lake for threat analysis.</p>
+        <span class="pill lead-role">Co-speaker</span> <span class="pill">with Ravindra Ved</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://wpthane.in/workshop-wordpress-security-101-protecting-your-website-like-a-pro/">
+        <div class="when mb-1">10 Jun 2023 · Thane</div>
+        <h3>WordPress Security 101: Protecting Your Website Like a Pro</h3>
+        <p class="mb-2">Hands-on workshop at the WordPress Thane meetup.</p>
+        <span class="pill lead-role">Speaker</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://awsughyd.com/acd/">
+        <div class="when mb-1">18 Mar 2023 · Hyderabad</div>
+        <h3>Fortifying the Cloud: Essential Security Strategies to Protect Resources</h3>
+        <p class="mb-2">AWS Community Day Hyderabad 2023, Track 2.</p>
+        <span class="pill lead-role">Co-speaker</span> <span class="pill">with Medha Shree</span></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.youtube.com/watch?v=5banQvHheMM">
+        <div class="when mb-1">11 Mar 2023 · Online</div>
+        <h3>Security on the Cloud, Session 1: Overview of Security on Cloud</h3>
+        <p class="mb-2">AWS User Group Mumbai series: incidents, NIST and MITRE frameworks, shared responsibility.</p>
+        <span class="pill lead-role">Speaker</span> <span class="pill"><i class="bi bi-play-fill"></i> Recording</span></a></div>
+    </div>
+
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-2" style="letter-spacing:.08em">More appearances</h3>
+    <ul class="list-unstyled more-list card-x px-4 py-2 mb-0">
+      <li><span class="when">25 Jul 2026</span><span><strong>AWS Community Day Ahmedabad 2026</strong>, DevOps edition · Speaker <a class="small ms-1" href="https://www.linkedin.com/posts/awsahmedabadcommunity_aws-devopsedition2026-awsome-activity-7467855093321863168-86vP"><i class="bi bi-linkedin"></i> post</a></span></li>
+      <li><span class="when">May – Jun 2026</span><span><strong>Two AWS Summits in 30 days</strong> · Lightning talks and booth demos <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
+      <li><span class="when">May – Jun 2026</span><span><strong>AWS User Group Bhopal</strong> · Speaker <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
+      <li><span class="when">2025</span><span><strong>AWS Summit 2025</strong>, Developer Lounge · Speaker on cloud architecture and new AWS services</span></li>
+      <li><span class="when">2025</span><span><strong>Amazon Bedrock AgentCore hands-on workshop</strong> · Taking local AI agents to production with deployment, security and extension building blocks</span></li>
+      <li><span class="when">4 Mar 2024</span><span><strong>AWS Cloud Club CHARUSAT</strong>, Infrastructure Camp · Speaker</span></li>
+      <li><span class="when">4 Nov 2023</span><span><strong>AWS Community Day Vadodara</strong> · Introducing Amazon Security Lake for centralized security analytics</span></li>
+      <li><span class="when">2023</span><span><strong>AWS Community Day Nashik</strong> · Cloud and DevOps talk</span></li>
+    </ul>
+
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-2" style="letter-spacing:.08em">Community and events</h3>
+    <ul class="list-unstyled more-list card-x px-4 py-2 mb-0">
+      <li><span class="when">2026</span><span><strong>AWS User Group Indore</strong> · Re-launched the user group as organizer <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_aws-gitlab-agenticai-activity-7468195372344004608-tw4Z"><i class="bi bi-linkedin"></i> post</a></span></li>
+      <li><span class="when">Sep 2022</span><span><strong>AWS APJC Tech Summit 2022</strong>, Singapore · Workshops and tech-builder gyms <a class="small ms-1" href="https://www.linkedin.com/posts/shashankk_hereataws-aws-awssummit2022-activity-6974247233852456960-a2v8"><i class="bi bi-linkedin"></i> post</a></span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- FORMATS -->
+<section id="formats" class="block">
+  <div class="container">
+    <div class="eyebrow mb-2">For organizers</div>
+    <h2 class="section-title mb-2">Session formats</h2>
+    <p class="lead-muted mb-4">Every session can be tailored to your audience, from students to senior engineering leaders.</p>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-3"><div class="card-x p-4 h-100"><span class="icon-tile mb-3"><i class="bi bi-megaphone"></i></span><h3>Keynote</h3><p class="mb-0">30–45 minutes on where cloud, security and AI are heading, and what teams should do about it.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x p-4 h-100"><span class="icon-tile mb-3"><i class="bi bi-easel"></i></span><h3>Technical talk</h3><p class="mb-0">30–60 minutes with architecture diagrams and a live demo.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x p-4 h-100"><span class="icon-tile mb-3"><i class="bi bi-tools"></i></span><h3>Hands-on workshop</h3><p class="mb-0">2–4 hours. Attendees leave with something they built, such as a Bedrock agent or a GitOps pipeline.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x p-4 h-100"><span class="icon-tile mb-3"><i class="bi bi-camera-video"></i></span><h3>Webinar or panel</h3><p class="mb-0">Online sessions, fireside chats and panels across time zones in APAC.</p></div></div>
+    </div>
+    <div class="row g-4 mt-2">
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold mt-3">Audiences</h3>
+        <p class="text-body-secondary mb-0">Developer communities and user groups · engineering and platform teams · security and compliance teams · universities and cloud clubs · technology leaders</p>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="h6 fw-bold mt-3">Languages</h3>
+        <p class="text-body-secondary mb-0">English and Hindi on stage; Kannada, Gujarati and Marathi for Q&amp;A and hallway conversations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVITE -->
+<section id="invite" class="block">
+  <div class="container">
+    <div class="cta">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <div class="eyebrow mb-2" style="color:#bff0e7">Invite me to speak</div>
+          <h2 class="section-title text-white mb-3">Looking for a speaker who ships, not just talks?</h2>
+          <p class="text-white-75 mb-4">Keynotes, technical sessions, hands-on workshops and webinars for conferences, community days, user groups, universities and internal engineering teams, in person across India and online anywhere.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-light px-4" href="https://topmate.io/heyshashank/"><i class="bi bi-calendar-check me-2"></i>Book a call</a>
+            <a class="btn btn-outline-light px-4" href="https://www.linkedin.com/in/shashankk/"><i class="bi bi-linkedin me-2"></i>Message on LinkedIn</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="fw-semibold mb-2">Topics I speak on</div>
+          <ul class="list-unstyled d-grid gap-2 mb-3">
+            <li><i class="bi bi-robot me-2"></i>Agentic AI and GenAI in production: Bedrock, agents, guardrails</li>
+            <li><i class="bi bi-shield-lock me-2"></i>Cloud security posture, threat detection and zero trust</li>
+            <li><i class="bi bi-diagram-3 me-2"></i>DevSecOps, GitOps and AI across the software lifecycle</li>
+            <li><i class="bi bi-boxes me-2"></i>Kubernetes and infrastructure as code, hands-on</li>
+            <li><i class="bi bi-rocket-takeoff me-2"></i>Cloud careers and certification paths</li>
+          </ul>
+          <div class="speaker-photos d-flex gap-2">
+            <img src="img/speaker-2024.jpg" width="88" height="88" alt="Shashank Chinchli, AWS Community Day Mumbai 2024 speaker photo" loading="lazy">
+            <img src="img/speaker-2023.jpg" width="88" height="88" alt="Shashank Chinchli, AWS User Group Mumbai 2023 speaker photo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="block">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+      <div><div class="eyebrow mb-2">Writing</div><h2 class="section-title mb-0">Articles and guides</h2></div>
+      <a class="btn btn-outline-primary btn-sm" href="https://builder.aws.com/community/@heyshashank?tab=articles">All articles on AWS Builder Center <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://builder.aws.com/content/3GL3PS4JwwNBgwph16KjLhc0qLE/weekend-productivity-challenge-instanote-from-scattered-notes-to-a-calm-ai-planned-day"><div class="when mb-1">11 Jul 2026 · AWS Builder Center</div><h3>Instanote: From Scattered Notes to a Calm, AI-Planned Day</h3><p class="mb-0">An AI productivity workspace where every state-changing action waits for your approval.</p></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://aws.plainenglish.io/build-secure-and-responsible-genai-with-guardrails-for-amazon-bedrock-01d112a49244"><div class="when mb-1">11 Jan 2026 · AWS in Plain English</div><h3>Build Secure and Responsible GenAI with Guardrails for Amazon Bedrock</h3><p class="mb-0">A practical guide to guardrails for GenAI applications.</p></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://aws.plainenglish.io/how-to-use-aws-security-agent-for-automated-vulnerability-detection-and-remediation-cfdaef9af5b8"><div class="when mb-1">3 Dec 2025 · AWS in Plain English</div><h3>Automated Vulnerability Detection and Remediation with AWS Security Agent</h3><p class="mb-0">A walkthrough of the security agent announced at re:Invent 2025.</p></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://builder.aws.com/content/2rDdOp0uuF9vGNdvkQmp3hygzzX/how-did-i-prepare-for-aws-certified-solutions-architect-professional-course-sap-c02"><div class="when mb-1">27 Jan 2025 · AWS Builder Center</div><h3>How I Prepared for AWS Solutions Architect – Professional (SAP-C02)</h3><p class="mb-0">Study plan, resources and exam-day approach.</p></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://www.linkedin.com/pulse/how-improve-security-posture-your-aws-cloud-shashank-chinchli"><div class="when mb-1">2024 · LinkedIn</div><h3>How to Improve the Security Posture of Your AWS Cloud</h3><p class="mb-0">Strategies for strengthening security across an AWS estate.</p></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100" href="https://aws.amazon.com/blogs/machine-learning/build-your-own-face-recognition-service-using-amazon-rekognition/"><div class="when mb-1">13 Aug 2017 · AWS Machine Learning Blog</div><h3>Build Your Own Face Recognition Service Using Amazon Rekognition</h3><p class="mb-0">A serverless face-recognition service with Rekognition, Lambda and DynamoDB.</p></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="block">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+      <div><div class="eyebrow mb-2">Videos</div><h2 class="section-title mb-0">Tutorials on Mr Cloud Architect</h2></div>
+      <a class="btn btn-outline-primary btn-sm" href="https://www.youtube.com/@mr.cloudarchitect">Visit the channel <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100 d-flex gap-3" href="https://www.youtube.com/watch?v=DhQlXZlbJKA"><span class="icon-tile"><i class="bi bi-play-fill"></i></span><div><div class="when">29 Nov 2025 · 27 min</div><h3 class="mb-0">AWS AI Practitioner (AIF-C01) Full Course and Study Guide</h3></div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100 d-flex gap-3" href="https://www.youtube.com/watch?v=PA_xh7b45I0"><span class="icon-tile"><i class="bi bi-play-fill"></i></span><div><div class="when">29 Dec 2025 · 6 min</div><h3 class="mb-0">Learn AWS in 2026: Cloud Practitioner Services Explained</h3></div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100 d-flex gap-3" href="https://www.youtube.com/watch?v=E6W517x_nTA"><span class="icon-tile"><i class="bi bi-play-fill"></i></span><div><div class="when">23 Mar 2025 · 18 min</div><h3 class="mb-0">Zero to Hero: Automate WordPress on AWS with Terraform and Amazon Q Developer</h3></div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100 d-flex gap-3" href="https://www.youtube.com/watch?v=Kh0nO2uYcAE"><span class="icon-tile"><i class="bi bi-play-fill"></i></span><div><div class="when">5 Nov 2025 · 9 min</div><h3 class="mb-0">AWS Security Groups: Inbound and Outbound Rules for EC2</h3></div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x p-4 h-100 d-flex gap-3" href="https://www.youtube.com/watch?v=juFkeosSt84"><span class="icon-tile"><i class="bi bi-play-fill"></i></span><div><div class="when">28 Apr 2025 · 8 min</div><h3 class="mb-0">AWS VPC Tutorial: Subnets, Route Tables, Internet and NAT Gateways</h3></div></a></div>
+    </div>
+    <h3 class="h6 text-uppercase text-body-secondary fw-bold mt-5 mb-3" style="letter-spacing:.08em">Shorts</h3>
+    <div class="row g-2">
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/3r6N0OHg0u8"><span class="when">16 Aug 2026</span><h3 class="mb-0 small fw-semibold">AWS Certification Roadmap 2026: the role-based path</h3></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/QG0_OvWhl0g"><span class="when">21 May 2026</span><h3 class="mb-0 small fw-semibold">How Kubernetes Works: Pods, ReplicaSets, Services, Rolling Updates</h3></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/GxobjYvQipM"><span class="when">12 Nov 2025</span><h3 class="mb-0 small fw-semibold">AWS Launches an Agentic AI Microcredential</h3></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/UuX2bsRz3Kw"><span class="when">22 Oct 2025</span><h3 class="mb-0 small fw-semibold">How to Prepare for Your AWS Certification Exam</h3></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/7RTQqf8r6Rk"><span class="when">24 Sep 2025</span><h3 class="mb-0 small fw-semibold">AWS AI FastTrack: Accelerate Your Path to AI</h3></a></div>
+      <div class="col-md-6 col-lg-4"><a class="card-x px-3 py-2 h-100" href="https://www.youtube.com/shorts/DBjRO6dUoYo"><span class="when">26 Jul 2025</span><h3 class="mb-0 small fw-semibold">Agentic AI Solutions and Development Tools at AWS</h3></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN SOURCE -->
+<section id="open-source" class="block">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+      <div><div class="eyebrow mb-2">Open source</div><h2 class="section-title mb-0">Contributions and projects</h2></div>
+      <a class="btn btn-outline-primary btn-sm" href="https://contributors.gitlab.com/users/hey.shashank?fromDate=2025-12-04&amp;toDate=">GitLab contributor profile <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-3"><a class="card-x p-4 h-100" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230198"><span class="icon-tile mb-3"><i class="bi bi-git"></i></span><div class="when">Merged 15 Apr 2026 · gitlab-org/gitlab</div><h3 class="mb-0">Fix the Compliance Center sidebar link that returned a 404</h3></a></div>
+      <div class="col-md-6 col-lg-3"><a class="card-x p-4 h-100" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230199"><span class="icon-tile mb-3"><i class="bi bi-journal-text"></i></span><div class="when">Merged 8 Apr 2026 · gitlab-org/gitlab</div><h3 class="mb-0">Improve Compliance Center onboarding docs</h3></a></div>
+      <div class="col-md-6 col-lg-3"><a class="card-x p-4 h-100" href="https://schinchli.github.io/learnk8s/"><span class="icon-tile mb-3"><i class="bi bi-boxes"></i></span><div class="when">Project · GitHub</div><h3>learnk8s</h3><p class="mb-0">Animated, narrated Kubernetes labs from core concepts to production SRE scenarios.</p></a></div>
+      <div class="col-md-6 col-lg-3"><a class="card-x p-4 h-100" href="https://github.com/schinchli/aws-sow-validator"><span class="icon-tile mb-3"><i class="bi bi-clipboard-check"></i></span><div class="when">Project · GitHub</div><h3>aws-sow-validator</h3><p class="mb-0">Deterministic review of cloud scope-of-work documents and architectures.</p></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="block">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+        <div class="eyebrow mb-2">Credentials</div>
+        <h2 class="section-title mb-3">Every AWS certification, and then some</h2>
+        <p class="lead-muted mb-4">All 13 AWS certifications, recognized with the AWS Golden Jacket, plus Azure Solutions Architect Expert, Google Cloud and Cloud Security Alliance credentials.</p>
+        <a class="btn btn-outline-primary" href="https://www.credly.com/users/shashank-chinchli"><i class="bi bi-patch-check me-2"></i>Verify on Credly</a>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Professional &amp; Specialty</div><p class="mb-0">Solutions Architect Pro · DevOps Engineer Pro · Security · Advanced Networking · Machine Learning · Database</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Associate &amp; Foundational</div><p class="mb-0">Solutions Architect · Developer · SysOps · Data Engineer · ML Engineer · AI Practitioner · Cloud Practitioner</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Microsoft Azure</div><p class="mb-0">Solutions Architect Expert · Administrator Associate · Security, Data and Azure Fundamentals</p></div></div>
+          <div class="col-sm-6"><div class="card-x p-4 h-100"><div class="fw-semibold mb-2">Google Cloud &amp; industry</div><p class="mb-0">Generative AI Leader · Cloud Digital Leader · CCSK v4 (Cloud Security Alliance)</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="py-4">
+  <div class="container d-flex flex-wrap gap-3 justify-content-between align-items-center">
+    <span>© 2026 Shashank Chinchli · Views are my own.</span>
+    <span class="d-flex gap-3">
+      <a href="https://www.linkedin.com/in/shashankk/" rel="me">LinkedIn</a>
+      <a href="https://github.com/schinchli" rel="me">GitHub</a>
+      <a href="https://gitlab.com/hey.shashank" rel="me">GitLab</a>
+      <a href="https://builder.aws.com/community/@heyshashank" rel="me">Builder Center</a>
+      <a href="https://www.youtube.com/@mr.cloudarchitect" rel="me">YouTube</a>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  (function () {
+    var root = document.documentElement, key = 'theme';
+    function apply(t) { root.setAttribute('data-bs-theme', t); }
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    apply(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    document.getElementById('theme').addEventListener('click', function () {
+      var next = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem(key, next); } catch (e) {}
+    });
+    document.querySelectorAll('#nav .nav-link[href^="#"], #nav .btn[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var c = document.getElementById('nav');
+        if (c.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(c).hide();
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://schinchli.github.io/sitemap.xml
