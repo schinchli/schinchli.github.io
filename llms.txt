@@ -1,0 +1,6 @@
+# Shashank Chinchli
+> Senior Solutions Architect at GitLab, former AWS Solutions Architect and Technical Trainer. 15+ years in cloud, security, GenAI and DevSecOps. Mentors aspiring Solutions Architects; keynote and workshop speaker.
+
+- [Home](https://schinchli.github.io/): experience, speaking record, mentoring, writing, open source, credentials
+- [Book mentoring or a speaking call](https://topmate.io/heyshashank/)
+- [LinkedIn](https://www.linkedin.com/in/shashankk/)
