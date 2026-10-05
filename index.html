@@ -345,9 +345,15 @@
   .navbar-brand { font-family: Fraunces, Georgia, serif; font-size: 1.15rem; letter-spacing: -.01em; }
   .stat .num { font-family: Fraunces, Georgia, serif; font-weight: 600; }
   .trust { border-block: 1px solid var(--bs-border-color); background: var(--surface); }
-  .trust .items { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.75rem; padding: 1rem 0; color: var(--bs-secondary-color); font-size: .86rem; font-weight: 500; }
-  .trust .items span::before { content: "\25C6"; color: var(--g2); font-size: .6rem; margin-right: .55rem; vertical-align: .15em; }
-  .trust .lbl { text-transform: uppercase; letter-spacing: .14em; font-size: .7rem; font-weight: 700; width: 100%; text-align: center; margin-top: .9rem; color: var(--bs-secondary-color); }
+  .trust .lbl { text-transform: uppercase; letter-spacing: .14em; font-size: .7rem; font-weight: 700; text-align: center; padding: .9rem 0 .5rem; color: var(--bs-secondary-color); }
+  .trust { padding-bottom: .9rem; }
+  .mq { overflow: hidden; padding: .3rem 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .mq-track { display: flex; gap: .6rem; width: max-content; animation: mq 55s linear infinite; }
+  .mq.rev .mq-track { animation-direction: reverse; animation-duration: 65s; }
+  .mq:hover .mq-track { animation-play-state: paused; }
+  .mq span { white-space: nowrap; font-size: .86rem; font-weight: 500; padding: .4rem 1rem; border-radius: 999px; border: 1px solid var(--bs-border-color); background: var(--bs-body-bg); color: var(--bs-secondary-color); }
+  @keyframes mq { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .mq { mask-image: none; -webkit-mask-image: none; } .mq-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } .mq-track [aria-hidden] { display: none; } }
   .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
   .chip { font-size: .85rem; font-weight: 600; padding: .35rem .95rem; border-radius: 999px; border: 1px solid var(--bs-border-color); background: var(--surface); color: var(--bs-body-color); cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
   .chip:hover { border-color: var(--bs-primary); }
@@ -417,11 +423,10 @@
   </div>
 </header>
 
-<div class="trust" aria-label="Where Shashank has spoken">
-  <div class="container"><div class="items">
-    <div class="lbl">Has spoken at</div>
-    <span>AWS Summit Bengaluru</span><span>AWS Summit Mumbai</span><span>AWS Community Day Bengaluru</span><span>AWS Community Day Mumbai</span><span>AWS Community Day Hyderabad</span><span>GitLab APAC webcasts</span><span>BeSA Cloud Academy</span>
-  </div></div>
+<div class="trust" aria-label="Events where Shashank has spoken">
+  <div class="container"><div class="lbl">Has spoken at</div></div>
+  <div class="mq "><div class="mq-track"><span>AWS Summit Bengaluru</span><span>AWS Summit Mumbai</span><span>AWS Summit 2025 · Developer Lounge</span><span>AWS Community Day Bengaluru</span><span>AWS Community Day Mumbai</span><span>AWS Community Day Hyderabad</span><span>AWS Community Day Vadodara</span><span>AWS Community Day Nashik</span></div></div>
+  <div class="mq rev"><div class="mq-track"><span>GitLab APAC webcasts</span><span>AWS User Group Indore</span><span>AWS User Group Bhopal</span><span>AWS User Group Mumbai</span><span>Bangalore YugabyteDB User Group</span><span>AWS UG Women in Tech Nepal · Kathmandu</span><span>BeSA Cloud Academy</span><span>AI for Bharat</span><span>AWS Cloud Club CHARUSAT</span><span>WordPress Thane meetup</span></div></div>
 </div>
 
 <!-- EXPERIENCE -->
@@ -851,6 +856,7 @@
       b.innerHTML = d[0] + '<span class="n">' + d[2] + '</span>'; b.addEventListener('click', function () { show(d[1]); }); bar.appendChild(b);
     });
     show(-1);
+    document.querySelectorAll('.mq-track').forEach(function (t) { var c = document.createElement('div'); c.style.display = 'contents'; c.setAttribute('aria-hidden', 'true'); c.innerHTML = t.innerHTML; t.appendChild(c); });
     // scroll-spy
     if ('IntersectionObserver' in window) {
       var links = {}; document.querySelectorAll('#nav .nav-link[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
