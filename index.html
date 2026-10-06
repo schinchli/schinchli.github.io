@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shashank Chinchli · Solutions Architect, Mentor &amp; Speaker</title>
 <meta name="description" content="Shashank Chinchli is a Senior Solutions Architect at GitLab and former AWS Solutions Architect with 14+ years in cloud, security, GenAI and DevSecOps. Book 1:1 Solutions Architect mentoring, or invite him to keynote or run a workshop at your event.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-cD26v/F9o5Iz7f77qKWLx86qO+QvuWQ+4bi6Eyfv0/c=' 'sha256-YaWRR10HxjoIUUlu+ptrenkIdS4K5IjEIhfDX9VRAh8='; style-src 'sha256-esQD4vCscHWY56BHPrE/YZ70OJo92HHkAmasXE5pv2Q='; font-src 'self'; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-cpwPXY0DR2MMABk3o61Wfatmbha7XMdVX2IqIdKWDGE='; style-src 'sha256-hS3qr3LiVkyzeONIvWY95BCyIoJBwrcpEAMSSqMJ7Fg='; font-src 'self'; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="author" content="Shashank Chinchli">
 <meta name="color-scheme" content="light dark">
@@ -177,17 +177,18 @@
 }
 </script>
 
-<script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js')</script>
 <style>@font-face{font-family:Geist;src:url(fonts/geist-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
-:root{--bg:#fbfafc;--alt:#f4f1f7;--text:#1d1625;--muted:#5b5266;--soft:#766d82;--line:#e5dfec;--accent:#5b2a86;--accent-h:#45206a;--on-accent:#fff;--gold:#d6b06b;--hero:#1e0f2d;--panel:#2a1340;--r:8px;--w:1120px;--gut:clamp(20px,4vw,40px)}
-:root[data-theme=dark]{--bg:#0f0b14;--alt:#15101c;--text:#efeaf4;--muted:#b0a6bd;--soft:#9186a0;--line:#2a2233;--accent:#d6b06b;--accent-h:#e6c78d;--on-accent:#1a1020;--hero:#170b22;--panel:#241038}
+:root{--bg:#fbfafc;--alt:#f4f1f7;--text:#1d1625;--muted:#5b5266;--soft:#766d82;--line:#e5dfec;--accent:#5b2a86;--accent-h:#45206a;--on-accent:#fff;--gold:#d6b06b;--hero:#1e0f2d;--panel:#2a1340;--r:8px;--w:1120px;--gut:clamp(20px,4vw,40px);--fs-xs:.875rem;--fs-sm:.95rem;--fs-md:1.05rem;--fs-lg:1.25rem;--fs-num:2rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0b14;--alt:#15101c;--text:#efeaf4;--muted:#b0a6bd;--soft:#9186a0;--line:#2a2233;--accent:#d6b06b;--accent-h:#e6c78d;--on-accent:#1a1020;--hero:#170b22;--panel:#241038}}
 *{box-sizing:border-box}
-html{scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+html{scroll-padding-top:80px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Geist,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-optical-sizing:auto;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 a:hover{color:var(--accent-h)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+strong,b{font-weight:600}
 h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15}
 p{margin:0;text-wrap:pretty}h1,h2,h3{text-wrap:balance}button,input,select,textarea{font-family:inherit}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 var(--gut)}
@@ -197,20 +198,20 @@ p{margin:0;text-wrap:pretty}h1,h2,h3{text-wrap:balance}button,input,select,texta
 /* header */
 header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-weight:600;letter-spacing:-.01em;color:var(--text);text-decoration:none;font-size:1.05rem}
+.brand{font-weight:600;letter-spacing:-.01em;color:var(--text);text-decoration:none;font-size:var(--fs-md)}
 nav{display:flex;align-items:center;gap:1.5rem}
-nav a:not(.btn){color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .15s}
+nav a:not(.btn){color:var(--muted);text-decoration:none;font-size:var(--fs-sm);transition:color .15s}
 nav a:not(.btn):hover,nav a.active{color:var(--text)}
 nav a.active{font-weight:500}
-.menu,.theme{background:none;border:0;color:var(--muted);font:inherit;font-size:.92rem;cursor:pointer;padding:.4rem 0}
-.theme:hover,.menu:hover{color:var(--text)}
+.menu{background:none;border:0;color:var(--muted);font:inherit;font-size:var(--fs-sm);cursor:pointer;padding:.4rem 0}
+.menu:hover{color:var(--text)}
 .menu{display:none}
 
 /* buttons: one radius scale, 8px */
-.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:44px;padding:0 1.25rem;border-radius:var(--r);background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);font:500 .95rem/1 Geist,system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:44px;padding:0 1.25rem;border-radius:var(--r);background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);font:500 var(--fs-sm)/1 Geist,system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s,transform .1s}
 .btn:hover{background:var(--accent-h);border-color:var(--accent-h);color:var(--on-accent)}
 .btn:active{transform:translateY(1px)}
-.btn.small{min-height:36px;padding:0 1rem;font-size:.88rem}
+.btn.small{min-height:36px;padding:0 1rem;font-size:var(--fs-xs)}
 .btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
 .btn.ghost:hover{background:var(--alt);border-color:var(--soft);color:var(--text)}
 .btn.light{background:var(--gold);color:#1a1020;border-color:var(--gold)}
@@ -222,9 +223,9 @@ nav a.active{font-weight:500}
 /* hero */
 .hero{background:var(--hero);color:#f4eef9;padding:96px 0 88px;border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent)}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:72px;align-items:center}
-.role-line{color:var(--gold);font-size:1.05rem;font-weight:500;margin-bottom:1.1rem}
+.role-line{color:var(--gold);font-size:var(--fs-md);font-weight:500;margin-bottom:1.1rem}
 h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;color:#fff}
-.sub{font-size:1.2rem;color:#cdc0db;max-width:34rem;margin-top:1.4rem;line-height:1.6}
+.sub{font-size:var(--fs-lg);color:#cdc0db;max-width:34rem;margin-top:1.4rem;line-height:1.6}
 .hero .btn{background:var(--gold);border-color:var(--gold);color:#1a1020}
 .hero .btn:hover{background:#e6c78d;border-color:#e6c78d;color:#1a1020}
 .hero .btn.ghost{background:transparent;color:#f4eef9;border-color:rgba(255,255,255,.3)}
@@ -237,17 +238,20 @@ h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;col
 .glance-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .glance-grid>div{padding:28px 24px 28px 0}
 .glance-grid>div+div{padding-left:24px;border-left:1px solid var(--line)}
-.glance strong{display:block;font-size:1.9rem;font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
-.glance span{color:var(--muted);font-size:.92rem;display:block;max-width:18rem}
+.glance strong{display:block;font-size:var(--fs-num);font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
+.glance span{color:var(--muted);font-size:var(--fs-sm);display:block;max-width:18rem}
 
-/* events, typed */
-.spoken{border-top:1px solid var(--line);padding:44px 0}
-.spoken .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.75rem}
-.spoken .lbl{color:var(--soft);font-size:.95rem}
-.typed{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;letter-spacing:-.025em;line-height:1.3;min-height:1.3em;color:var(--accent)}
-.typed::after{content:"";display:inline-block;width:2px;height:.95em;margin-left:5px;background:var(--gold);vertical-align:-.1em;animation:caret 1s steps(1) infinite}
-@keyframes caret{50%{opacity:0}}
-.events{list-style:none;margin:.75rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;color:var(--muted);font-size:.95rem;width:100%}
+/* events, split-flap board */
+.spoken{border-top:1px solid var(--line);padding:48px 0 56px}
+.spoken .lbl{display:block;color:var(--soft);font-size:var(--fs-sm);margin-bottom:1rem}
+.board{--cw:min(32px,calc((100vw - 2*var(--gut) - 75px)/18));display:inline-flex;flex-direction:column;gap:6px;padding:12px;border-radius:var(--r);background:#150a20;border:1px solid rgba(214,176,107,.28);max-width:100%}
+.board .ln{display:flex;gap:3px}
+.board .c{position:relative;display:block;width:var(--cw);height:calc(var(--cw)*1.5);border-radius:3px;background:linear-gradient(#34194f 50%,#281340 50%);color:var(--gold);font-weight:600;font-size:calc(var(--cw)*.74);line-height:calc(var(--cw)*1.5);text-align:center;perspective:200px;overflow:hidden}
+.board .c::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.6)}
+.board .c>span{display:block;transform-origin:50% 100%}
+.board .c.f>span{animation:flap .16s ease-out}
+@keyframes flap{from{transform:rotateX(-70deg);opacity:.25}to{transform:none;opacity:1}}
+.events{list-style:none;margin:.75rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;color:var(--muted);font-size:var(--fs-sm);width:100%}
 .js .events{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
 
 /* sections */
@@ -255,29 +259,29 @@ h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;col
 .block.alt{background:var(--alt)}
 .block.tight{padding:0 0 96px;border-top:0}
 h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.03em;max-width:24ch}
-.intro{color:var(--muted);max-width:42rem;margin-top:1rem;font-size:1.05rem}
-.note{color:var(--soft);font-size:.92rem;margin-top:1.5rem;max-width:42rem}
-h3{font-size:1.05rem;letter-spacing:-.01em;line-height:1.35}
+.intro{color:var(--muted);max-width:42rem;margin-top:1rem;font-size:var(--fs-md)}
+.note{color:var(--soft);font-size:var(--fs-sm);margin-top:1.5rem;max-width:42rem}
+h3{font-size:var(--fs-md);letter-spacing:-.01em;line-height:1.35}
 .rows{margin-top:2.25rem}
 .row{display:grid;grid-template-columns:11rem 1fr;gap:2rem;padding:1.75rem 0;border-top:1px solid var(--line);color:inherit;text-decoration:none}
 .rows>.row:last-child{border-bottom:1px solid var(--line)}
-.row .meta{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.row .meta{color:var(--muted);font-size:var(--fs-xs);font-variant-numeric:tabular-nums}
 .row .soft,.item .soft{color:var(--soft)}
-.row p{color:var(--muted);margin-top:.35rem;font-size:.97rem;max-width:44rem}
-.row ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:.97rem}
+.row p{color:var(--muted);margin-top:.35rem;font-size:var(--fs-sm);max-width:44rem}
+.row ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted);font-size:var(--fs-sm)}
 .row li{margin-bottom:.3rem}
 a.row:hover h3{color:var(--accent)}
-.role{display:inline-block;color:var(--soft);font-size:.9rem;margin:.6rem 1.25rem 0 0}
-.links{display:inline-flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-top:.6rem;font-size:.92rem}
+.role{display:inline-block;color:var(--soft);font-size:var(--fs-xs);margin:.6rem 1.25rem 0 0}
+.links{display:inline-flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-top:.6rem;font-size:var(--fs-sm)}
 .links a::after{content:"\2192";margin-left:.35em}
 .links a{text-decoration:none;font-weight:500}
 .links a:hover{text-decoration:underline}
 .year{margin-top:3rem}
-.year>h3{font-size:.95rem;color:var(--soft);font-weight:500}
+.year>h3{font-size:var(--fs-sm);color:var(--soft);font-weight:500}
 .year .rows{margin-top:.75rem}
 .talk[hidden],.year[hidden]{display:none}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem}
-.chip{font:500 .9rem/1 Geist,system-ui,sans-serif;padding:.65rem 1rem;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;transition:background .15s,border-color .15s}
+.chip{font:500 var(--fs-xs)/1 Geist,system-ui,sans-serif;padding:.65rem 1rem;border-radius:var(--r);border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;transition:background .15s,border-color .15s}
 .chip:hover{border-color:var(--soft)}
 .chip[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}
 .chip .n{opacity:.6;margin-left:.4rem}
@@ -288,19 +292,19 @@ a.row:hover h3{color:var(--accent)}
 .cols3{grid-template-columns:repeat(3,1fr)}
 .cols2{grid-template-columns:repeat(2,1fr)}
 .cols4>div,.domains>div,.cols2>div,.item{border-top:1px solid var(--line);padding-top:1.1rem}
-.cols4 p,.domains p,.cols2 p,.item p{color:var(--muted);margin-top:.4rem;font-size:.97rem}
+.cols4 p,.domains p,.cols2 p,.item p{color:var(--muted);margin-top:.4rem;font-size:var(--fs-sm)}
 .domains{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem}
 .item{display:block;color:inherit;text-decoration:none}
-.item .meta{color:var(--soft);font-size:.88rem;margin-bottom:.5rem}
+.item .meta{color:var(--soft);font-size:var(--fs-xs);margin-bottom:.5rem}
 .item:hover h3{color:var(--accent)}
 .povs .pov{border-top:0;border-left:2px solid var(--accent);padding:0 0 0 1.25rem}
-.povs h3{font-size:1.25rem}
-.povs a{display:inline-block;margin-top:.75rem;font-weight:500;font-size:.95rem}
+.povs h3{font-size:var(--fs-lg)}
+.povs a{display:inline-block;margin-top:.75rem;font-weight:500;font-size:var(--fs-sm)}
 .lists{grid-template-columns:repeat(2,1fr)}
 .lists>div{border-top:0;padding-top:0}
 .lists h3{margin-bottom:.5rem}
-.line{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid var(--line);color:var(--text);text-decoration:none;font-size:.97rem}
-.line .meta{color:var(--soft);font-size:.88rem}
+.line{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid var(--line);color:var(--text);text-decoration:none;font-size:var(--fs-sm)}
+.line .meta{color:var(--soft);font-size:var(--fs-xs)}
 .line:hover span:last-child{color:var(--accent)}
 .creds{margin-top:0}
 .split{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}
@@ -314,9 +318,9 @@ a.row:hover h3{color:var(--accent)}
 .panel p{color:#cdc0db;margin-top:1rem;max-width:34rem}
 .panel h3{color:var(--gold);margin-bottom:.75rem}
 .panel ul{margin:0;padding:0;list-style:none}
-.panel li{padding:.75rem 0;border-top:1px solid rgba(214,176,107,.28);color:#e2d8ec;font-size:.97rem}
+.panel li{padding:.75rem 0;border-top:1px solid rgba(214,176,107,.28);color:#e2d8ec;font-size:var(--fs-sm)}
 
-footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:28px 0}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--fs-xs);padding:28px 0}
 .foot{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
 .social{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
 .social a{color:var(--muted)}
@@ -348,8 +352,8 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;
   .actions .btn{flex:1 1 auto}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .typed{display:none}
+  html{scroll-behavior:auto!important}
+  .board{display:none}
   .js .events{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;margin:.75rem 0 0}
 }
 @media print{header.site,.spoken,.chips,.panel,.top,#progress{display:none}.hero{background:none;color:#000;padding:24px 0}h1,.sub,.role-line{color:#000}}
@@ -373,8 +377,8 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .js .hero-grid>div>*,.js .portrait{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
 .js .hero-grid>div>:nth-child(2){animation-delay:.06s}.js .hero-grid>div>:nth-child(3){animation-delay:.12s}.js .hero-grid>div>:nth-child(4){animation-delay:.18s}.js .portrait{animation-delay:.1s}
-.js .rv{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease;transition-delay:calc(var(--i,0)*45ms)}
-.js .rv.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*70ms);will-change:opacity,transform}
+.js .rv.in{opacity:1;transform:none;will-change:auto}
 @media (max-width:900px){nav a:not(.btn)::after{display:none}}
 @media (prefers-reduced-motion:reduce){
   .js .rv{opacity:1;transform:none;transition:none}
@@ -385,7 +389,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 
 .feature{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;margin-top:2.5rem}
 .feature p{color:var(--muted);margin-top:.5rem;max-width:34rem}
-.feature h3.more{margin-top:2rem;font-size:.95rem;color:var(--soft);font-weight:500}
+.feature h3.more{margin-top:2rem;font-size:var(--fs-sm);color:var(--soft);font-weight:500}
 .feature .line{grid-template-columns:6.5rem 1fr}
 .thumb{display:block;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
 .thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .3s}
@@ -397,15 +401,15 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 @media (max-width:620px){.lists .line,.lists>div:last-child .line{grid-template-columns:1fr}}
 
 /* back to top */
-.top{position:fixed;right:20px;bottom:20px;z-index:45;min-height:40px;display:inline-flex;align-items:center;padding:0 .9rem;border-radius:var(--r);background:var(--bg);color:var(--text);border:1px solid var(--line);text-decoration:none;font-size:.88rem;font-weight:500;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s,border-color .15s}
+.top{position:fixed;right:20px;bottom:20px;z-index:45;min-height:40px;display:inline-flex;align-items:center;padding:0 .9rem;border-radius:var(--r);background:var(--bg);color:var(--text);border:1px solid var(--line);text-decoration:none;font-size:var(--fs-xs);font-weight:500;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s,border-color .15s}
 .top.show{opacity:1;transform:none;pointer-events:auto}
 .top:hover{border-color:var(--accent);color:var(--text)}
 @media (prefers-reduced-motion:reduce){.top{transition:none}}
 
 /* about */
 .prose{max-width:42rem}
-.prose p{color:var(--muted);font-size:1.05rem;margin-bottom:1.1rem}
-.prose p.lead{color:var(--text);font-size:1.25rem;line-height:1.55;letter-spacing:-.01em}
+.prose p{color:var(--muted);font-size:var(--fs-md);margin-bottom:1.1rem}
+.prose p.lead{color:var(--text);font-size:var(--fs-lg);line-height:1.55;letter-spacing:-.01em}
 .more{margin-top:1.5rem}
 .more summary{display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;list-style:none;color:var(--accent);font-weight:500}
 .more summary::-webkit-details-marker{display:none}
@@ -421,6 +425,22 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 .row .meta .soft{margin-top:.15rem}
 @media (max-width:1100px){nav{gap:1.1rem}}
 @media (prefers-reduced-motion:reduce){.more summary::after{transition:none}}
+
+/* tabs */
+.tabs{display:none;gap:2rem;margin-top:2.5rem;border-bottom:1px solid var(--line)}
+.js .tabs{display:flex;overflow-x:auto;scrollbar-width:none}
+.tab{background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:.9rem 0;font:500 var(--fs-md)/1.2 Geist,system-ui,sans-serif;color:var(--muted);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s}
+.tab:hover{color:var(--text)}
+.tab[aria-selected=true]{color:var(--text);border-bottom-color:var(--accent)}
+.panel-title{margin:3.5rem 0 0;font-size:var(--fs-md)}
+.js .panel-title{display:none}
+.tabpanel{margin-top:2.25rem}
+.tabpanel[hidden]{display:none}
+.tabpanel>.intro:first-child{margin-top:0}
+.tabpanel .rows,.tabpanel .cols3{margin-top:1.5rem}
+.js .tabpanel:not([hidden]){animation:panel .35s ease both}
+@keyframes panel{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.tab{transition:none}.js .tabpanel:not([hidden]){animation:none}.js .rv{transition-duration:0s!important}}
 </style>
 </head>
 <body>
@@ -431,9 +451,8 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
     <a class="brand" href="#main">Shashank Chinchli</a>
     <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Primary">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#mentoring">Mentoring</a><a href="#insights">Insights</a><a href="#writing">Writing</a><a href="#credentials">Credentials</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#mentoring">Mentoring</a><a href="#insights">Insights</a><a href="#writing">Content</a><a href="#credentials">Credentials</a>
       <a class="btn small" href="#invite">Work with me</a>
-      <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
     </nav>
   </div>
 </header>
@@ -464,8 +483,8 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 <section class="spoken" aria-label="Events where Shashank has spoken">
   <div class="wrap">
     <span class="lbl">Has spoken at</span>
-    <div class="typed" aria-hidden="true"></div>
-    <ul class="events"><li>AWS Summit Bengaluru</li><li>AWS Summit Mumbai</li><li>AWS Summit 2025, Developer Lounge</li><li>AWS Community Day Bengaluru</li><li>AWS Community Day Mumbai</li><li>AWS Community Day Hyderabad</li><li>AWS Community Day Vadodara</li><li>AWS Community Day Nashik</li><li>GitLab APAC webcasts</li><li>AWS User Group Indore</li><li>AWS User Group Bhopal</li><li>AWS User Group Mumbai</li><li>Bangalore YugabyteDB User Group</li><li>AWS UG Women in Tech Nepal, Kathmandu</li><li>BeSA Cloud Academy</li><li>AI for Bharat</li><li>AWS Cloud Club CHARUSAT</li><li>WordPress Thane meetup</li></ul>
+    <div class="board" aria-hidden="true"></div>
+    <ul class="events"><li>AWS Summit Bengaluru</li><li>AWS Summit Mumbai</li><li>AWS Summit 2025, Developer Lounge</li><li>AWS Community Day Bengaluru</li><li>AWS Community Day Mumbai</li><li>AWS Community Day Hyderabad</li><li>AWS Community Day Vadodara</li><li>AWS Community Day Nashik</li><li>GitLab APAC webcasts</li><li>AWS User Group Indore</li><li>AWS User Group Bhopal</li><li>AWS User Group Mumbai</li><li>YugabyteDB User Group Bangalore</li><li>AWS UG Women in Tech Nepal</li><li>BeSA Cloud Academy</li><li>AI for Bharat</li><li>AWS Cloud Club CHARUSAT</li><li>WordPress Thane meetup</li></ul>
   </div>
 </section>
 
@@ -591,17 +610,22 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 
 <section id="writing" class="block alt">
   <div class="wrap">
-    <h2>Articles and guides</h2>
-    <p class="intro">Also on <a href="https://builder.aws.com/community/@heyshashank?tab=articles">AWS Builder Center</a>.</p>
-    <div class="cols3"><a class="item" href="https://builder.aws.com/content/3GL3PS4JwwNBgwph16KjLhc0qLE/weekend-productivity-challenge-instanote-from-scattered-notes-to-a-calm-ai-planned-day"><div class="meta">11 Jul 2026<br>AWS Builder Center</div><h3>Instanote: From Scattered Notes to a Calm, AI-Planned Day</h3><p>An AI productivity workspace where every state-changing action waits for your approval.</p></a><a class="item" href="https://aws.plainenglish.io/build-secure-and-responsible-genai-with-guardrails-for-amazon-bedrock-01d112a49244"><div class="meta">11 Jan 2026<br>AWS in Plain English</div><h3>Build Secure and Responsible GenAI with Guardrails for Amazon Bedrock</h3><p>A practical guide to guardrails for GenAI applications.</p></a><a class="item" href="https://aws.plainenglish.io/how-to-use-aws-security-agent-for-automated-vulnerability-detection-and-remediation-cfdaef9af5b8"><div class="meta">3 Dec 2025<br>AWS in Plain English</div><h3>Automated Vulnerability Detection and Remediation with AWS Security Agent</h3><p>A walkthrough of the security agent announced at re:Invent 2025.</p></a><a class="item" href="https://builder.aws.com/content/2rDdOp0uuF9vGNdvkQmp3hygzzX/how-did-i-prepare-for-aws-certified-solutions-architect-professional-course-sap-c02"><div class="meta">27 Jan 2025<br>AWS Builder Center</div><h3>How I Prepared for AWS Solutions Architect - Professional (SAP-C02)</h3><p>Study plan, resources and exam-day approach.</p></a><a class="item" href="https://www.linkedin.com/pulse/how-improve-security-posture-your-aws-cloud-shashank-chinchli"><div class="meta">2024<br>LinkedIn</div><h3>How to Improve the Security Posture of Your AWS Cloud</h3><p>Strategies for strengthening security across an AWS estate.</p></a><a class="item" href="https://aws.amazon.com/blogs/machine-learning/build-your-own-face-recognition-service-using-amazon-rekognition/"><div class="meta">13 Aug 2017<br>AWS Machine Learning Blog</div><h3>Build Your Own Face Recognition Service Using Amazon Rekognition</h3><p>A serverless face-recognition service with Rekognition, Lambda and DynamoDB.</p></a></div>
-  </div>
-</section>
-
-<section id="videos" class="block">
-  <div class="wrap">
-    <h2>Tutorials on Mr Cloud Architect</h2>
-    <p class="intro">Long-form walkthroughs and shorts on <a href="https://www.youtube.com/@mr.cloudarchitect">the YouTube channel</a>.</p>
-    <div class="feature">
+    <h2>Writing, videos and open source</h2>
+    <p class="intro">Articles, talk recordings, tutorials and code, grouped by type.</p>
+    <div class="tabs" role="tablist" aria-label="Content type">
+      <button class="tab" role="tab" id="tab-articles" aria-controls="articles" aria-selected="true" type="button">Articles</button>
+      <button class="tab" role="tab" id="tab-videos" aria-controls="videos" aria-selected="false" tabindex="-1" type="button">Videos</button>
+      <button class="tab" role="tab" id="tab-open-source" aria-controls="open-source" aria-selected="false" tabindex="-1" type="button">Open source</button>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="articles" aria-labelledby="tab-articles" tabindex="0">
+      <h3 class="panel-title">Articles</h3>
+      <p class="intro">Also on <a href="https://builder.aws.com/community/@heyshashank?tab=articles">AWS Builder Center</a>.</p>
+      <div class="cols3"><a class="item" href="https://builder.aws.com/content/3GL3PS4JwwNBgwph16KjLhc0qLE/weekend-productivity-challenge-instanote-from-scattered-notes-to-a-calm-ai-planned-day"><div class="meta">11 Jul 2026<br>AWS Builder Center</div><h3>Instanote: From Scattered Notes to a Calm, AI-Planned Day</h3><p>An AI productivity workspace where every state-changing action waits for your approval.</p></a><a class="item" href="https://aws.plainenglish.io/build-secure-and-responsible-genai-with-guardrails-for-amazon-bedrock-01d112a49244"><div class="meta">11 Jan 2026<br>AWS in Plain English</div><h3>Build Secure and Responsible GenAI with Guardrails for Amazon Bedrock</h3><p>A practical guide to guardrails for GenAI applications.</p></a><a class="item" href="https://aws.plainenglish.io/how-to-use-aws-security-agent-for-automated-vulnerability-detection-and-remediation-cfdaef9af5b8"><div class="meta">3 Dec 2025<br>AWS in Plain English</div><h3>Automated Vulnerability Detection and Remediation with AWS Security Agent</h3><p>A walkthrough of the security agent announced at re:Invent 2025.</p></a><a class="item" href="https://builder.aws.com/content/2rDdOp0uuF9vGNdvkQmp3hygzzX/how-did-i-prepare-for-aws-certified-solutions-architect-professional-course-sap-c02"><div class="meta">27 Jan 2025<br>AWS Builder Center</div><h3>How I Prepared for AWS Solutions Architect - Professional (SAP-C02)</h3><p>Study plan, resources and exam-day approach.</p></a><a class="item" href="https://www.linkedin.com/pulse/how-improve-security-posture-your-aws-cloud-shashank-chinchli"><div class="meta">2024<br>LinkedIn</div><h3>How to Improve the Security Posture of Your AWS Cloud</h3><p>Strategies for strengthening security across an AWS estate.</p></a><a class="item" href="https://aws.amazon.com/blogs/machine-learning/build-your-own-face-recognition-service-using-amazon-rekognition/"><div class="meta">13 Aug 2017<br>AWS Machine Learning Blog</div><h3>Build Your Own Face Recognition Service Using Amazon Rekognition</h3><p>A serverless face-recognition service with Rekognition, Lambda and DynamoDB.</p></a></div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="videos" aria-labelledby="tab-videos" tabindex="0">
+      <h3 class="panel-title">Videos</h3>
+      <p class="intro">Talk recordings, long-form tutorials and shorts on <a href="https://www.youtube.com/@mr.cloudarchitect">the Mr Cloud Architect channel</a>.</p>
+      <div class="feature">
       <a class="thumb" href="https://www.youtube.com/watch?v=BY4YlxhSKr8"><img src="https://i.ytimg.com/vi/BY4YlxhSKr8/hqdefault.jpg" width="480" height="270" loading="lazy" alt="Video thumbnail: A beginners guide to Amazon Bedrock, Knowledge Bases, Guardrails and Security, BeSA Cloud Academy"></a>
       <div>
         <h3>A beginners guide to Amazon Bedrock, Knowledge Bases, Guardrails and Security</h3>
@@ -614,14 +638,12 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
       </div>
     </div>
     <div class="cols2 lists"><div><h3>Tutorials</h3><a class="line" href="https://www.youtube.com/watch?v=DhQlXZlbJKA"><span class="meta">29 Nov 2025 · 27 min</span><span>AWS AI Practitioner (AIF-C01) Full Course and Study Guide</span></a><a class="line" href="https://www.youtube.com/watch?v=PA_xh7b45I0"><span class="meta">29 Dec 2025 · 6 min</span><span>Learn AWS in 2026: Cloud Practitioner Services Explained</span></a><a class="line" href="https://www.youtube.com/watch?v=E6W517x_nTA"><span class="meta">23 Mar 2025 · 18 min</span><span>Zero to Hero: Automate WordPress on AWS with Terraform and Amazon Q Developer</span></a><a class="line" href="https://www.youtube.com/watch?v=Kh0nO2uYcAE"><span class="meta">5 Nov 2025 · 9 min</span><span>AWS Security Groups: Inbound and Outbound Rules for EC2</span></a><a class="line" href="https://www.youtube.com/watch?v=juFkeosSt84"><span class="meta">28 Apr 2025 · 8 min</span><span>AWS VPC Tutorial: Subnets, Route Tables, Internet and NAT Gateways</span></a></div><div><h3>Shorts</h3><a class="line" href="https://www.youtube.com/shorts/3r6N0OHg0u8"><span class="meta">16 Aug 2026</span><span>AWS Certification Roadmap 2026: the role-based path</span></a><a class="line" href="https://www.youtube.com/shorts/QG0_OvWhl0g"><span class="meta">21 May 2026</span><span>How Kubernetes Works: Pods, ReplicaSets, Services, Rolling Updates</span></a><a class="line" href="https://www.youtube.com/shorts/GxobjYvQipM"><span class="meta">12 Nov 2025</span><span>AWS Launches an Agentic AI Microcredential</span></a><a class="line" href="https://www.youtube.com/shorts/UuX2bsRz3Kw"><span class="meta">22 Oct 2025</span><span>How to Prepare for Your AWS Certification Exam</span></a><a class="line" href="https://www.youtube.com/shorts/7RTQqf8r6Rk"><span class="meta">24 Sep 2025</span><span>AWS AI FastTrack: Accelerate Your Path to AI</span></a><a class="line" href="https://www.youtube.com/shorts/DBjRO6dUoYo"><span class="meta">26 Jul 2025</span><span>Agentic AI Solutions and Development Tools at AWS</span></a></div></div>
-  </div>
-</section>
-
-<section id="open-source" class="block alt">
-  <div class="wrap">
-    <h2>Open source contributions and projects</h2>
-    <p class="intro">Contributor to Strands Agents, AWS sample repositories and GitLab. See the <a href="https://contributors.gitlab.com/users/hey.shashank?fromDate=2025-12-04&amp;toDate=">GitLab contributor profile</a>.</p>
-    <div class="rows"><a class="row" href="https://github.com/strands-agents/harness-sdk/pull/4682"><div class="meta"><div>Merged 29 Sep 2026</div><div class="soft">strands-agents/harness-sdk</div></div><div><h3>Strands Agents SDK: locale-independent model output</h3><p>Numbers the TypeScript SDK sends to the model no longer change with the machine's locale.</p></div></a><a class="row" href="https://github.com/strands-agents/samples/pull/318"><div class="meta"><div>In review</div><div class="soft">strands-agents/samples</div></div><div><h3>Calendar-assistant tutorial for Strands</h3><p>A turn-by-turn agent that never double-books: on a clash it asks you which time to use.</p></div></a><a class="row" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230198"><div class="meta"><div>Merged 15 Apr 2026</div><div class="soft">gitlab-org/gitlab</div></div><div><h3>Fix the Compliance Center sidebar link that returned a 404</h3></div></a><a class="row" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230199"><div class="meta"><div>Merged 8 Apr 2026</div><div class="soft">gitlab-org/gitlab</div></div><div><h3>Improve Compliance Center onboarding docs</h3></div></a><a class="row" href="https://schinchli.github.io/learnk8s/"><div class="meta"><div>Project</div><div class="soft">GitHub</div></div><div><h3>learnk8s</h3><p>Animated, narrated Kubernetes labs from core concepts to production SRE scenarios.</p></div></a><a class="row" href="https://github.com/schinchli/aws-sow-validator"><div class="meta"><div>Project</div><div class="soft">GitHub</div></div><div><h3>aws-sow-validator</h3><p>Deterministic review of cloud scope-of-work documents and architectures.</p></div></a><a class="row" href="https://github.com/awslabs/agentcore-samples/pull/1947"><div class="meta"><div>Submitted 10 Aug 2026</div><div class="soft">awslabs/agentcore-samples</div></div><div><h3>POC Validator agent sample for Amazon Bedrock AgentCore</h3><p>Deterministic review of scope-of-work documents and architectures with Amazon Nova on Amazon Bedrock AgentCore. The open-source implementation is aws-sow-validator.</p></div></a><a class="row" href="https://github.com/awslabs/amazon-bedrock-agent-samples/issues/127"><div class="meta"><div>Issue raised 11 May 2025</div><div class="soft">awslabs/amazon-bedrock-agent-samples</div></div><div><h3>Content feedback on the multi-agent Financial Analyst and Portfolio sample</h3></div></a><article class="row"><div class="meta"><div>Sep to Oct 2026</div><div class="soft">strands-agents</div></div><div><h3>More fixes and docs across Strands Agents</h3><p>Ten pull requests in total across the SDK, Shell and samples: one merged, nine in review as of 6 Oct 2026. Plus four bug reports, one already fixed.</p><div class="links"><a href="https://github.com/strands-agents/harness-sdk/pull/4844">Isolate bash tool commands</a> <a href="https://github.com/strands-agents/shell/pull/125">Release the GIL in Shell</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4790">Agents-as-tools docs</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4787">Memory injection docs</a> <a href="https://github.com/strands-agents/samples/pull/317">Fix TypeScript samples install</a> <a href="https://github.com/strands-agents/samples/pull/315">Pin the first-agent sample</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4680">Reject mis-cased interventions values</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4675">Trace attributes on memory spans</a></div></div></article></div>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="open-source" aria-labelledby="tab-open-source" tabindex="0">
+      <h3 class="panel-title">Open source</h3>
+      <p class="intro">Contributor to Strands Agents, AWS sample repositories and GitLab. See the <a href="https://contributors.gitlab.com/users/hey.shashank?fromDate=2025-12-04&amp;toDate=">GitLab contributor profile</a>.</p>
+      <div class="rows"><a class="row" href="https://github.com/strands-agents/harness-sdk/pull/4682"><div class="meta"><div>Merged 29 Sep 2026</div><div class="soft">strands-agents/harness-sdk</div></div><div><h3>Strands Agents SDK: locale-independent model output</h3><p>Numbers the TypeScript SDK sends to the model no longer change with the machine's locale.</p></div></a><a class="row" href="https://github.com/strands-agents/samples/pull/318"><div class="meta"><div>In review</div><div class="soft">strands-agents/samples</div></div><div><h3>Calendar-assistant tutorial for Strands</h3><p>A turn-by-turn agent that never double-books: on a clash it asks you which time to use.</p></div></a><a class="row" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230198"><div class="meta"><div>Merged 15 Apr 2026</div><div class="soft">gitlab-org/gitlab</div></div><div><h3>Fix the Compliance Center sidebar link that returned a 404</h3></div></a><a class="row" href="https://gitlab.com/gitlab-org/gitlab/-/merge_requests/230199"><div class="meta"><div>Merged 8 Apr 2026</div><div class="soft">gitlab-org/gitlab</div></div><div><h3>Improve Compliance Center onboarding docs</h3></div></a><a class="row" href="https://schinchli.github.io/learnk8s/"><div class="meta"><div>Project</div><div class="soft">GitHub</div></div><div><h3>learnk8s</h3><p>Animated, narrated Kubernetes labs from core concepts to production SRE scenarios.</p></div></a><a class="row" href="https://github.com/schinchli/aws-sow-validator"><div class="meta"><div>Project</div><div class="soft">GitHub</div></div><div><h3>aws-sow-validator</h3><p>Deterministic review of cloud scope-of-work documents and architectures.</p></div></a><a class="row" href="https://github.com/awslabs/agentcore-samples/pull/1947"><div class="meta"><div>Submitted 10 Aug 2026</div><div class="soft">awslabs/agentcore-samples</div></div><div><h3>POC Validator agent sample for Amazon Bedrock AgentCore</h3><p>Deterministic review of scope-of-work documents and architectures with Amazon Nova on Amazon Bedrock AgentCore. The open-source implementation is aws-sow-validator.</p></div></a><a class="row" href="https://github.com/awslabs/amazon-bedrock-agent-samples/issues/127"><div class="meta"><div>Issue raised 11 May 2025</div><div class="soft">awslabs/amazon-bedrock-agent-samples</div></div><div><h3>Content feedback on the multi-agent Financial Analyst and Portfolio sample</h3></div></a><article class="row"><div class="meta"><div>Sep to Oct 2026</div><div class="soft">strands-agents</div></div><div><h3>More fixes and docs across Strands Agents</h3><p>Ten pull requests in total across the SDK, Shell and samples: one merged, nine in review as of 6 Oct 2026. Plus four bug reports, one already fixed.</p><div class="links"><a href="https://github.com/strands-agents/harness-sdk/pull/4844">Isolate bash tool commands</a> <a href="https://github.com/strands-agents/shell/pull/125">Release the GIL in Shell</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4790">Agents-as-tools docs</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4787">Memory injection docs</a> <a href="https://github.com/strands-agents/samples/pull/317">Fix TypeScript samples install</a> <a href="https://github.com/strands-agents/samples/pull/315">Pin the first-agent sample</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4680">Reject mis-cased interventions values</a> <a href="https://github.com/strands-agents/harness-sdk/pull/4675">Trace attributes on memory spans</a></div></div></article></div>
+    </div>
   </div>
 </section>
 
@@ -658,12 +680,6 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 <a class="top" href="#main" aria-label="Back to top">Back to top</a>
 
 <script>(function () {
-  var root = document.documentElement;
-  document.getElementById('theme').addEventListener('click', function () {
-    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    try { localStorage.setItem('theme', next); } catch (e) {}
-  });
   var nav = document.getElementById('nav'), menu = document.getElementById('menu');
   function toggle(open) { nav.classList.toggle('open', open); menu.setAttribute('aria-expanded', String(open)); }
   menu.addEventListener('click', function () { toggle(!nav.classList.contains('open')); });
@@ -702,9 +718,9 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 
   // reveal on scroll, once
   if ('IntersectionObserver' in window && !calm) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -6% 0px' });
-    document.querySelectorAll('.block h2, .block .intro, .rows > .row, .cols4 > div, .cols3 > div, .cols3 > a, .cols2 > div, .domains > div, .panel, .stack li, .line').forEach(function (el) {
-      var i = [].indexOf.call(el.parentNode.children, el); el.style.setProperty('--i', Math.min(i, 6)); el.classList.add('rv'); io.observe(el);
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.block h2, .block .intro, .prose > *, .tabs, .rows > .row, .cols4 > div, .cols3 > div, .cols3 > a, .cols2 > div, .domains > div, .panel, .stack li, .line, .feature > *, .year > h3, .chips').forEach(function (el) {
+      var i = [].indexOf.call(el.parentNode.children, el); el.style.setProperty('--i', Math.min(i, 5)); el.classList.add('rv'); io.observe(el);
     });
     // count-up for the at-a-glance numbers
     var cio = new IntersectionObserver(function (es) { es.forEach(function (e) {
@@ -716,22 +732,40 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
     document.querySelectorAll('.glance strong').forEach(function (el) { cio.observe(el); });
   }
 
-  // typed event names: type, hold, erase, next. Static list shows instead when motion is reduced.
-  var out = document.querySelector('.typed'), names = [].map.call(document.querySelectorAll('.events li'), function (l) { return l.textContent; });
-  if (out && !calm && names.length) {
-    var i = 0, n = 0, erasing = false, seen = true;
-    new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(out);
-    (function tick() {
-      if (!seen || document.hidden) return setTimeout(tick, 400);
-      var s = names[i];
-      if (!erasing) {
-        out.textContent = s.slice(0, ++n);
-        if (n === s.length) { erasing = true; return setTimeout(tick, 1800); }
-        return setTimeout(tick, 42 + Math.random() * 38);
-      }
-      out.textContent = s.slice(0, --n);
-      if (n === 0) { erasing = false; i = (i + 1) % names.length; return setTimeout(tick, 380); }
-      setTimeout(tick, 16);
+  // split-flap board: each tile flips through a few characters, lands on the event name, holds, then moves on.
+  // Static list shows instead when motion is reduced.
+  var board = document.querySelector('.board'), names = [].map.call(document.querySelectorAll('.events li'), function (l) { return l.textContent; });
+  if (board && !calm && names.length) {
+    var SEQ = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.-&/', COLS = 18, ROWS = 2, cells = [], seen = true;
+    for (var r = 0; r < ROWS; r++) {
+      var ln = document.createElement('div'); ln.className = 'ln';
+      for (var k = 0; k < COLS; k++) { var el = document.createElement('span'); el.className = 'c'; el.appendChild(document.createElement('span')); ln.appendChild(el); cells.push({ el: el, ch: ' ' }); }
+      board.appendChild(ln);
+    }
+    new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(board);
+    var put = function (cell, ch) { cell.ch = ch; cell.el.firstChild.textContent = ch === ' ' ? '' : ch; cell.el.classList.remove('f'); void cell.el.offsetWidth; cell.el.classList.add('f'); };
+    var wrap = function (s) {
+      var out = ['']; s.toUpperCase().split(' ').forEach(function (w) { var l = out[out.length - 1], n = l ? l + ' ' + w : w; if (n.length <= COLS) out[out.length - 1] = n; else out.push(w); });
+      return out.slice(0, ROWS);
+    };
+    var show = function (s) {
+      var L = wrap(s), longest = 0;
+      cells.forEach(function (cell, i) {
+        var row = Math.floor(i / COLS), col = i % COLS, to = (L[row] || '').padEnd(COLS, ' ')[col];
+        if (cell.ch === to) return;
+        var end = SEQ.indexOf(to), steps = end < 0 ? 1 : 3 + Math.floor(Math.random() * 6), delay = col * 26 + row * 70;
+        for (var n = 1; n <= steps; n++) (function (n) {
+          var ch = end < 0 ? to : SEQ[(end - steps + n + SEQ.length * 2) % SEQ.length];
+          setTimeout(function () { put(cell, ch); }, delay + n * 60);
+        })(n);
+        longest = Math.max(longest, delay + steps * 60);
+      });
+      return longest;
+    };
+    var i = 0;
+    (function next() {
+      if (!seen || document.hidden) return setTimeout(next, 500);
+      var ms = show(names[i]); i = (i + 1) % names.length; setTimeout(next, ms + 2600);
     })();
   }
 })();
