@@ -1,0 +1,11 @@
+/* Option A: Aubergine and Champagne Gold, Geist. Adaptive light and dark. */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 640' fill='none'%3E%3Cg stroke='%23e0b873' stroke-width='1.6' stroke-linecap='round' stroke-dasharray='1 10'%3E%3Cpath d='M-40 560C240 140 720 40 1240 300'/%3E%3Cpath d='M-40 640C320 260 760 180 1240 470'/%3E%3Cpath d='M200 700C500 380 900 300 1240 120'/%3E%3C/g%3E%3Cg fill='%23e0b873'%3E%3Ccircle cx='1004' cy='143' r='4'/%3E%3Ccircle cx='1190' cy='290' r='3'/%3E%3Ccircle cx='300' cy='388' r='3'/%3E%3C/g%3E%3C/svg%3E") right bottom/cover no-repeat;opacity:.6}
+#mentoring{border-top:0;background:radial-gradient(70% 120% at 0% 0%,rgba(196,84,166,.22),transparent 60%),linear-gradient(135deg,var(--hero-a),var(--hero-b) 60%,var(--hero-c))}
+#mentoring h2,#mentoring .card-title{color:#fff}
+#mentoring>.container>.row h2{color:#fff}
+#mentoring .intro,#mentoring .note{color:#e2d7ee}
+#mentoring .note a{color:var(--gold-h)}
+#mentoring .card{--bs-card-bg:rgba(255,255,255,.07);--bs-card-border-color:rgba(255,255,255,.16);--bs-card-title-color:#fff;--bs-card-color:#efe6f7;backdrop-filter:blur(6px)}
+#mentoring .card-text{color:#e2d7ee}
+#mentoring .btn-primary{background-image:linear-gradient(135deg,#efd39d,#d9ab5f);--bs-btn-color:#1a1020;color:#1a1020}
