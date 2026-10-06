@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shashank Chinchli · Solutions Architect, Mentor &amp; Speaker</title>
 <meta name="description" content="Shashank Chinchli is a Senior Solutions Architect at GitLab and former AWS Solutions Architect with 14+ years in cloud, security, GenAI and DevSecOps. Book 1:1 Solutions Architect mentoring, or invite him to keynote or run a workshop at your event.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-cD26v/F9o5Iz7f77qKWLx86qO+QvuWQ+4bi6Eyfv0/c=' 'sha256-kvTiIwBm2msRnjLMgcdTi95DiERmRUEnXy5NZ8kD/Mw='; style-src 'sha256-A152EfCQ2v8hLUKmHuVZkgn2dAp5b+6wMgGf5WSJnfQ=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-cD26v/F9o5Iz7f77qKWLx86qO+QvuWQ+4bi6Eyfv0/c=' 'sha256-YaWRR10HxjoIUUlu+ptrenkIdS4K5IjEIhfDX9VRAh8='; style-src 'sha256-esQD4vCscHWY56BHPrE/YZ70OJo92HHkAmasXE5pv2Q='; font-src 'self'; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="author" content="Shashank Chinchli">
-<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfafc" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0b14" media="(prefers-color-scheme: dark)">
 <meta property="og:locale" content="en_IN">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://schinchli.github.io/">
-<link rel="icon" href="img/shashank-chinchli-256.jpg">
-<link rel="apple-touch-icon" href="img/shashank-chinchli-256.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preload" as="image" href="img/shashank-chinchli.jpg" fetchpriority="high">
 
 <meta property="og:type" content="profile">
@@ -33,9 +34,7 @@
 <meta name="twitter:description" content="14+ years in cloud, security, GenAI and DevSecOps. Solutions Architect mentoring, keynotes and workshops.">
 <meta name="twitter:image" content="https://schinchli.github.io/img/og.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<link rel="preload" as="font" type="font/woff2" href="fonts/geist-latin.woff2" crossorigin>
 
 <script type="application/ld+json">
 {
@@ -179,19 +178,20 @@
 </script>
 
 <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')</script>
-<style>:root{--bg:#fafafa;--alt:#f3f3f5;--text:#18181b;--muted:#52525b;--soft:#71717a;--line:#e4e4e7;--accent:#0e6e63;--accent-h:#0a5249;--on-accent:#fff;--panel:#0f2e2a;--r:8px;--w:1120px}
-:root[data-theme=dark]{--bg:#0c0c0e;--alt:#111114;--text:#ececee;--muted:#a1a1aa;--soft:#8b8b94;--line:#27272a;--accent:#5bc4b2;--accent-h:#86d8c9;--on-accent:#06201c;--panel:#12302c}
+<style>@font-face{font-family:Geist;src:url(fonts/geist-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+:root{--bg:#fbfafc;--alt:#f4f1f7;--text:#1d1625;--muted:#5b5266;--soft:#766d82;--line:#e5dfec;--accent:#5b2a86;--accent-h:#45206a;--on-accent:#fff;--gold:#d6b06b;--hero:#1e0f2d;--panel:#2a1340;--r:8px;--w:1120px;--gut:clamp(20px,4vw,40px)}
+:root[data-theme=dark]{--bg:#0f0b14;--alt:#15101c;--text:#efeaf4;--muted:#b0a6bd;--soft:#9186a0;--line:#2a2233;--accent:#d6b06b;--accent-h:#e6c78d;--on-accent:#1a1020;--hero:#170b22;--panel:#241038}
 *{box-sizing:border-box}
 html{scroll-padding-top:80px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Geist,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Geist,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-optical-sizing:auto;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 a:hover{color:var(--accent-h)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15}
-p{margin:0}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:12px;top:-4rem;z-index:50;background:var(--accent);color:var(--on-accent);padding:.5rem 1rem;border-radius:var(--r)}
+p{margin:0;text-wrap:pretty}h1,h2,h3{text-wrap:balance}button,input,select,textarea{font-family:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:12px;top:-4rem;z-index:70;background:var(--accent);color:var(--on-accent);padding:.5rem 1rem;border-radius:var(--r)}
 .skip:focus{top:12px}
 
 /* header */
@@ -213,19 +213,24 @@ nav a.active{font-weight:500}
 .btn.small{min-height:36px;padding:0 1rem;font-size:.88rem}
 .btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
 .btn.ghost:hover{background:var(--alt);border-color:var(--soft);color:var(--text)}
-.btn.light{background:#fff;color:#0f2e2a;border-color:#fff}
-.btn.light:hover{background:#e9f3f1;color:#0f2e2a}
+.btn.light{background:var(--gold);color:#1a1020;border-color:var(--gold)}
+.btn.light:hover{background:#e6c78d;border-color:#e6c78d;color:#1a1020}
 .btn.ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
 .btn.ghost-light:hover{background:rgba(255,255,255,.08);border-color:#fff;color:#fff}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
 
 /* hero */
-.hero{padding:72px 0 64px}
-.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:center}
-.role-line{color:var(--muted);font-size:1.05rem;margin-bottom:1rem}
-h1{font-size:clamp(2.6rem,6vw,4.25rem);letter-spacing:-.04em;line-height:1.02}
-.sub{font-size:1.2rem;color:var(--muted);max-width:34rem;margin-top:1.25rem;line-height:1.55}
-.portrait{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid var(--line)}
+.hero{background:var(--hero);color:#f4eef9;padding:96px 0 88px;border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent)}
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:72px;align-items:center}
+.role-line{color:var(--gold);font-size:1.05rem;font-weight:500;margin-bottom:1.1rem}
+h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;color:#fff}
+.sub{font-size:1.2rem;color:#cdc0db;max-width:34rem;margin-top:1.4rem;line-height:1.6}
+.hero .btn{background:var(--gold);border-color:var(--gold);color:#1a1020}
+.hero .btn:hover{background:#e6c78d;border-color:#e6c78d;color:#1a1020}
+.hero .btn.ghost{background:transparent;color:#f4eef9;border-color:rgba(255,255,255,.3)}
+.hero .btn.ghost:hover{background:rgba(255,255,255,.08);border-color:#fff;color:#fff}
+.hero :focus-visible{outline-color:var(--gold)}
+.portrait{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid color-mix(in srgb,var(--gold) 55%,transparent)}
 
 /* glance */
 .glance{border-top:1px solid var(--line)}
@@ -235,18 +240,18 @@ h1{font-size:clamp(2.6rem,6vw,4.25rem);letter-spacing:-.04em;line-height:1.02}
 .glance strong{display:block;font-size:1.9rem;font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
 .glance span{color:var(--muted);font-size:.92rem;display:block;max-width:18rem}
 
-/* events marquee */
-.spoken{border-top:1px solid var(--line);padding:22px 0 26px;overflow:hidden}
-.spoken>p{color:var(--soft);font-size:.9rem;margin-bottom:.75rem}
-.mq{overflow:hidden;padding:.35rem 0;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.mq-track{display:flex;width:max-content;animation:mq 70s linear infinite}
-.mq.rev .mq-track{animation-direction:reverse;animation-duration:80s}
-.mq:hover .mq-track{animation-play-state:paused}
-.mq span{white-space:nowrap;font-size:1.05rem;font-weight:500;color:var(--muted);padding-right:3rem}
-@keyframes mq{to{transform:translateX(-50%)}}
+/* events, typed */
+.spoken{border-top:1px solid var(--line);padding:44px 0}
+.spoken .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.75rem}
+.spoken .lbl{color:var(--soft);font-size:.95rem}
+.typed{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;letter-spacing:-.025em;line-height:1.3;min-height:1.3em;color:var(--accent)}
+.typed::after{content:"";display:inline-block;width:2px;height:.95em;margin-left:5px;background:var(--gold);vertical-align:-.1em;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.events{list-style:none;margin:.75rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;color:var(--muted);font-size:.95rem;width:100%}
+.js .events{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
 
 /* sections */
-.block{padding:96px 0;border-top:1px solid var(--line)}
+.block{padding:112px 0;border-top:1px solid var(--line)}
 .block.alt{background:var(--alt)}
 .block.tight{padding:0 0 96px;border-top:0}
 h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.03em;max-width:24ch}
@@ -254,7 +259,7 @@ h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.03em;max-width:24ch}
 .note{color:var(--soft);font-size:.92rem;margin-top:1.5rem;max-width:42rem}
 h3{font-size:1.05rem;letter-spacing:-.01em;line-height:1.35}
 .rows{margin-top:2.25rem}
-.row{display:grid;grid-template-columns:11rem 1fr;gap:1.5rem;padding:1.5rem 0;border-top:1px solid var(--line);color:inherit;text-decoration:none}
+.row{display:grid;grid-template-columns:11rem 1fr;gap:2rem;padding:1.75rem 0;border-top:1px solid var(--line);color:inherit;text-decoration:none}
 .rows>.row:last-child{border-bottom:1px solid var(--line)}
 .row .meta{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
 .row .soft,.item .soft{color:var(--soft)}
@@ -304,12 +309,12 @@ a.row:hover h3{color:var(--accent)}
 .sticky{position:sticky;top:96px}
 
 /* invite panel */
-.panel{background:var(--panel);color:#e9f3f1;border-radius:var(--r);padding:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.panel{background:var(--panel);color:#ece4f4;border-radius:var(--r);padding:64px;border:1px solid rgba(214,176,107,.3);display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
 .panel h2{color:#fff;max-width:20ch}
-.panel p{color:#bcd6d1;margin-top:1rem;max-width:34rem}
-.panel h3{color:#fff;margin-bottom:.75rem}
+.panel p{color:#cdc0db;margin-top:1rem;max-width:34rem}
+.panel h3{color:var(--gold);margin-bottom:.75rem}
 .panel ul{margin:0;padding:0;list-style:none}
-.panel li{padding:.7rem 0;border-top:1px solid rgba(255,255,255,.14);color:#cfe3df;font-size:.97rem}
+.panel li{padding:.75rem 0;border-top:1px solid rgba(214,176,107,.28);color:#e2d8ec;font-size:.97rem}
 
 footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:28px 0}
 .foot{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
@@ -318,25 +323,24 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;
 .social a:hover{color:var(--text)}
 
 @media (max-width:900px){
+  .hero{padding:56px 0}
   .menu{display:block}
   nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 20px}
   nav.open{display:flex}
   nav a:not(.btn){padding:.65rem 0;width:100%}
   nav .btn{margin:.5rem 0}
-  .hero{padding:44px 0 48px}
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .portrait{max-width:300px;order:-1}
   .glance-grid{grid-template-columns:repeat(2,1fr)}
   .glance-grid>div:nth-child(3){padding-left:0;border-left:0}
   .glance-grid>div:nth-child(n+3){border-top:1px solid var(--line)}
-  .block{padding:64px 0}.block.tight{padding-bottom:64px}
+  .block{padding:72px 0}
   .cols4,.cols3,.domains{grid-template-columns:repeat(2,1fr)}
   .split,.panel{grid-template-columns:1fr;gap:40px}
   .sticky{position:static}
   .panel{padding:36px 24px}
 }
 @media (max-width:620px){
-  .wrap{padding:0 20px}
   .row{grid-template-columns:1fr;gap:.35rem}
   .row .meta{display:flex;gap:.5rem}
   .cols4,.cols3,.cols2,.domains,.lists{grid-template-columns:1fr}
@@ -345,11 +349,10 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .mq{mask-image:none;-webkit-mask-image:none}
-  .mq-track{animation:none;flex-wrap:wrap;width:auto}
-  .mq-track [aria-hidden]{display:none}
+  .typed{display:none}
+  .js .events{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;margin:.75rem 0 0}
 }
-@media print{header.site,.spoken,.chips,.panel{display:none}}
+@media print{header.site,.spoken,.chips,.panel,.top,#progress{display:none}.hero{background:none;color:#000;padding:24px 0}h1,.sub,.role-line{color:#000}}
 
 /* stack */
 .stack{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;list-style:none;margin:2.5rem 0 0;padding:0}
@@ -361,7 +364,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;
 time{font-variant-numeric:tabular-nums}
 
 /* tiny motion */
-#progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:60;pointer-events:none}
+#progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;z-index:60;pointer-events:none}
 .links a::after{display:inline-block;transition:transform .15s}
 .links a:hover::after{transform:translateX(3px)}
 nav a:not(.btn){position:relative}
@@ -392,6 +395,32 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 @media (prefers-reduced-motion:reduce){.thumb img{transition:none}.thumb:hover img{transform:none}}
 .lists .line{grid-template-columns:10rem 1fr}.lists>div:last-child .line{grid-template-columns:6.5rem 1fr}
 @media (max-width:620px){.lists .line,.lists>div:last-child .line{grid-template-columns:1fr}}
+
+/* back to top */
+.top{position:fixed;right:20px;bottom:20px;z-index:45;min-height:40px;display:inline-flex;align-items:center;padding:0 .9rem;border-radius:var(--r);background:var(--bg);color:var(--text);border:1px solid var(--line);text-decoration:none;font-size:.88rem;font-weight:500;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s,border-color .15s}
+.top.show{opacity:1;transform:none;pointer-events:auto}
+.top:hover{border-color:var(--accent);color:var(--text)}
+@media (prefers-reduced-motion:reduce){.top{transition:none}}
+
+/* about */
+.prose{max-width:42rem}
+.prose p{color:var(--muted);font-size:1.05rem;margin-bottom:1.1rem}
+.prose p.lead{color:var(--text);font-size:1.25rem;line-height:1.55;letter-spacing:-.01em}
+.more{margin-top:1.5rem}
+.more summary{display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;list-style:none;color:var(--accent);font-weight:500}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";font-size:1.3rem;line-height:1;transition:transform .2s}
+.more[open] summary::after{transform:rotate(45deg)}
+.more summary:hover{color:var(--accent-h)}
+.more-body{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.more-body h3{margin:2rem 0 .5rem}
+.principles{margin:0;padding:0;list-style:none}
+.principles li{padding:.9rem 0;border-top:1px solid var(--line);color:var(--muted)}
+.principles li:last-child{border-bottom:1px solid var(--line)}
+.principles strong{color:var(--text);font-weight:600}
+.row .meta .soft{margin-top:.15rem}
+@media (max-width:1100px){nav{gap:1.1rem}}
+@media (prefers-reduced-motion:reduce){.more summary::after{transition:none}}
 </style>
 </head>
 <body>
@@ -402,7 +431,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
     <a class="brand" href="#main">Shashank Chinchli</a>
     <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Primary">
-      <a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#mentoring">Mentoring</a><a href="#insights">Insights</a><a href="#writing">Writing</a><a href="#credentials">Credentials</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#mentoring">Mentoring</a><a href="#insights">Insights</a><a href="#writing">Writing</a><a href="#credentials">Credentials</a>
       <a class="btn small" href="#invite">Work with me</a>
       <button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
     </nav>
@@ -414,7 +443,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="role-line">Senior Solutions Architect at GitLab, previously at AWS</p>
+      <p class="role-line">Senior Solutions Architect at GitLab, previously at AWS and KPMG</p>
       <h1>Shashank Chinchli</h1>
       <p class="sub">Mentor, speaker and trainer helping engineers become Solutions Architects and teams ship secure software in the cloud.</p>
       <div class="actions"><a class="btn" href="#invite">Work with me</a><a class="btn ghost" href="#mentoring">Mentoring</a></div>
@@ -432,17 +461,46 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
   </div>
 </section>
 
-<div class="spoken" aria-label="Events where Shashank has spoken">
-  <p class="wrap">Has spoken at</p>
-  <div class="mq "><div class="mq-track"><span>AWS Summit Bengaluru</span><span>AWS Summit Mumbai</span><span>AWS Summit 2025, Developer Lounge</span><span>AWS Community Day Bengaluru</span><span>AWS Community Day Mumbai</span><span>AWS Community Day Hyderabad</span><span>AWS Community Day Vadodara</span><span>AWS Community Day Nashik</span></div></div>
-  <div class="mq rev"><div class="mq-track"><span>GitLab APAC webcasts</span><span>AWS User Group Indore</span><span>AWS User Group Bhopal</span><span>AWS User Group Mumbai</span><span>Bangalore YugabyteDB User Group</span><span>AWS UG Women in Tech Nepal, Kathmandu</span><span>BeSA Cloud Academy</span><span>AI for Bharat</span><span>AWS Cloud Club CHARUSAT</span><span>WordPress Thane meetup</span></div></div>
-</div>
+<section class="spoken" aria-label="Events where Shashank has spoken">
+  <div class="wrap">
+    <span class="lbl">Has spoken at</span>
+    <div class="typed" aria-hidden="true"></div>
+    <ul class="events"><li>AWS Summit Bengaluru</li><li>AWS Summit Mumbai</li><li>AWS Summit 2025, Developer Lounge</li><li>AWS Community Day Bengaluru</li><li>AWS Community Day Mumbai</li><li>AWS Community Day Hyderabad</li><li>AWS Community Day Vadodara</li><li>AWS Community Day Nashik</li><li>GitLab APAC webcasts</li><li>AWS User Group Indore</li><li>AWS User Group Bhopal</li><li>AWS User Group Mumbai</li><li>Bangalore YugabyteDB User Group</li><li>AWS UG Women in Tech Nepal, Kathmandu</li><li>BeSA Cloud Academy</li><li>AI for Bharat</li><li>AWS Cloud Club CHARUSAT</li><li>WordPress Thane meetup</li></ul>
+  </div>
+</section>
+
+<section id="about" class="block">
+  <div class="wrap split">
+    <div class="sticky"><h2>About</h2></div>
+    <div class="prose">
+      <p class="lead">I am a Senior Solutions Architect at GitLab, working with engineering teams in India and ASEAN on DevSecOps and agentic AI. Before that I spent three and a half years at AWS, first as a Technical Trainer and then as a Solutions Architect, after leading cloud security architecture at KPMG India.</p>
+      <p>The through-line is the same in every role: take a hard technical topic, work out what a team actually needs, and leave them able to run with it. That has meant architecture reviews and migrations, security programs, classroom teaching and, more recently, helping teams adopt AI safely.</p>
+      <details class="more">
+        <summary>Read the full story</summary>
+        <div class="more-body">
+          <p>Before consulting, my work was hands-on engineering. A 2017 post on the AWS Machine Learning Blog, a face-recognition service built with Rekognition, Lambda and DynamoDB, is from that period.</p>
+          <p>At KPMG India, as a Manager and Cloud Security Architect, I led cloud security architecture and posture work for global enterprise clients: zero trust, identity and compliance automation across AWS, Azure and Google Cloud.</p>
+          <p>At AWS I started as an Authorized Instructor, teaching architecture, security, machine learning and DevOps to hundreds of professionals, and earned all 13 AWS certifications along the way. As a Solutions Architect II I worked with enterprise customers in financial services, healthcare and technology on Well-Architected reviews, migration assessments and AI/ML designs, and ran Amazon Bedrock workshops for developer communities.</p>
+          <p>At GitLab I help enterprises move to DevSecOps and bring agentic AI into the software lifecycle with GitLab Duo Agent Platform. I also contribute upstream: two merge requests to GitLab are merged so far, alongside fixes to Strands Agents.</p>
+          <p>Outside the day job I speak, write and teach. That is 30+ talks, workshops and webcasts, articles on AWS Builder Center, tutorials on YouTube, a co-organizer role at AWS User Group Indore and a track co-host role at AWS Community Day Bengaluru.</p>
+          <h3>How I work</h3>
+          <ul class="principles">
+            <li><strong>Start from the constraint.</strong> The budget, the compliance rule and the team's skills shape the design more than the service catalogue does.</li>
+            <li><strong>Write it down.</strong> Diagrams, decisions and runbooks outlast the meeting.</li>
+            <li><strong>Teach as I go.</strong> An engagement should leave the team more capable than it found them.</li>
+            <li><strong>Work in public.</strong> Talks, writing and upstream fixes keep my advice honest.</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
 
 <section id="experience" class="block">
   <div class="wrap">
-    <h2>Built in the field, not just on slides</h2>
-    <p class="intro">Every talk draws on work with enterprise teams: architecture reviews, migrations, security programs and AI workloads.</p>
-    <div class="rows"><article class="row"><div class="meta">Jan 2026 - present</div><div><h3>Senior Solutions Architect, GitLab</h3><ul><li>Guides enterprises across India and ASEAN through DevSecOps transformation: CI/CD, security scanning, compliance and GitOps.</li><li>Brings agentic AI into the software lifecycle with GitLab Duo Agent Platform.</li><li>Presents APAC technical webcasts on agentic AI and GitOps.</li></ul></div></article><article class="row"><div class="meta">May 2024 - Jan 2026</div><div><h3>Solutions Architect II, Amazon Web Services</h3><ul><li>Designed cloud architectures for enterprise customers in financial services, healthcare and technology.</li><li>Led Well-Architected reviews, migration assessments and AI/ML workload designs.</li><li>Ran Amazon Bedrock and GenAI workshops for developer communities.</li></ul></div></article><article class="row"><div class="meta">Jul 2022 - May 2024</div><div><h3>Technical Trainer, Amazon Web Services</h3><ul><li>Champion Authorized Instructor with a 4.8/5 CSAT, teaching architecture, security, machine learning and DevOps.</li><li>Trained hundreds of professionals; awarded the AWS Golden Jacket for holding all 13 AWS certifications.</li></ul></div></article><article class="row"><div class="meta">Feb 2021 - Jul 2022</div><div><h3>Manager, Cloud Security Architect, KPMG India</h3><ul><li>Led cloud security architecture and posture management for global enterprise clients.</li><li>Designed zero-trust, identity and compliance-automation programs across AWS, Azure and Google Cloud.</li></ul></div></article></div>
+    <h2>Where I have worked</h2>
+    <p class="intro">A product company, a Big Tech cloud provider and a Big Four consultancy. Every talk draws on this work: architecture reviews, migrations, security programs and AI workloads.</p>
+    <div class="rows"><article class="row"><div class="meta">Jan 2026 - present<div class="soft">Product company</div></div><div><h3>Senior Solutions Architect, GitLab</h3><ul><li>Help enterprise teams in India and ASEAN adopt DevSecOps: CI/CD, security scanning, compliance and GitOps, built around how they already ship.</li><li>Bring agentic AI into the software lifecycle with GitLab Duo Agent Platform, including workshops with Amazon Bedrock.</li><li>Present APAC webcasts and AWS Summit sessions, and send fixes and docs back to GitLab itself.</li></ul></div></article><article class="row"><div class="meta">May 2024 - Jan 2026<div class="soft">Big Tech</div></div><div><h3>Solutions Architect II, Amazon Web Services</h3><ul><li>Designed cloud architectures with enterprise customers in financial services, healthcare and technology.</li><li>Led Well-Architected reviews, migration assessments and AI/ML workload designs.</li><li>Ran Amazon Bedrock and GenAI workshops for developer communities, and spoke at AWS Summits and Community Days.</li></ul></div></article><article class="row"><div class="meta">Jul 2022 - May 2024<div class="soft">Big Tech</div></div><div><h3>Technical Trainer, Amazon Web Services</h3><ul><li>Taught architecture, security, machine learning and DevOps as a Champion Authorized Instructor, with a 4.8/5 CSAT.</li><li>Trained hundreds of professionals and earned all 13 AWS certifications, including the Golden Jacket.</li></ul></div></article><article class="row"><div class="meta">Feb 2021 - Jul 2022<div class="soft">Big Four consultancy</div></div><div><h3>Manager, Cloud Security Architect, KPMG India</h3><ul><li>Led cloud security architecture and posture management for global enterprise clients.</li><li>Designed zero-trust, identity and compliance-automation programs across AWS, Azure and Google Cloud.</li></ul></div></article></div>
     <div class="domains">
       <div><h3>Financial services</h3><p>Banking, payments and insurance, where security and compliance come first.</p></div>
       <div><h3>Healthcare and life sciences</h3><p>Regulated data, identity and multi-cloud security.</p></div>
@@ -513,7 +571,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
   <div class="wrap">
     <div class="panel">
       <div>
-        <h2>A speaker who ships, and a mentor who has done the job.</h2>
+        <h2>Speaking and mentoring, grounded in hands-on work.</h2>
         <p>Keynotes, technical sessions, hands-on workshops and webinars for conferences, community days, user groups, universities and internal engineering teams, in person across India and online anywhere. Taking speaking and mentoring requests for 2026-27.</p>
         <div class="actions"><a class="btn light" href="https://topmate.io/heyshashank/">Book a call</a><a class="btn ghost-light" href="https://www.linkedin.com/in/shashankk/">Message on LinkedIn</a></div>
       </div>
@@ -570,7 +628,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 <section id="credentials" class="block">
   <div class="wrap split">
     <div>
-      <h2>Every AWS certification, and then some</h2>
+      <h2>Certifications</h2>
       <p class="intro">Earned all 13 AWS certifications and the AWS Golden Jacket; 12 are active today, including Generative AI Developer Professional (2026). Plus Google Cloud and Cloud Security Alliance credentials.</p>
       <div class="actions"><a class="btn ghost" href="https://www.credly.com/users/shashank-chinchli">Verify on Credly</a></div>
     </div>
@@ -597,6 +655,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
     </span>
   </div>
 </footer>
+<a class="top" href="#main" aria-label="Back to top">Back to top</a>
 
 <script>(function () {
   var root = document.documentElement;
@@ -609,11 +668,6 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
   function toggle(open) { nav.classList.toggle('open', open); menu.setAttribute('aria-expanded', String(open)); }
   menu.addEventListener('click', function () { toggle(!nav.classList.contains('open')); });
   nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') toggle(false); });
-
-  // marquee: duplicate each track once for a seamless loop
-  document.querySelectorAll('.mq-track').forEach(function (t) {
-    var c = document.createElement('div'); c.style.display = 'contents'; c.setAttribute('aria-hidden', 'true'); c.innerHTML = t.innerHTML; t.appendChild(c);
-  });
 
   // topic filter for talks. ponytail: keyword inference over row text; add data-tags if topics get fuzzy.
   var TOPICS = [['GenAI and agents', /bedrock|agent|genai|amazon q|duo|chatbot|memory layer|summarizer/i], ['Security', /security|zero trust|fortif/i], ['DevSecOps and Kubernetes', /gitops|gitlab|kubernetes|devsecops|duo/i]];
@@ -642,7 +696,8 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 
   // reading progress
   var bar2 = document.getElementById('progress'), tick = false;
-  function prog() { var h = document.documentElement.scrollHeight - innerHeight; bar2.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')'; tick = false; }
+  var topBtn = document.querySelector('.top');
+  function prog() { topBtn.classList.toggle('show', scrollY > 900); var h = document.documentElement.scrollHeight - innerHeight; bar2.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')'; tick = false; }
   addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(prog); } }, { passive: true }); prog();
 
   // reveal on scroll, once
@@ -659,6 +714,25 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
       (function step(t) { var p = Math.min(1, (t - t0) / 900), v = end * (1 - Math.pow(1 - p, 3)); el.textContent = v.toFixed(dec) + m[2]; if (p < 1) requestAnimationFrame(step); })(t0);
     }); }, { threshold: 1 });
     document.querySelectorAll('.glance strong').forEach(function (el) { cio.observe(el); });
+  }
+
+  // typed event names: type, hold, erase, next. Static list shows instead when motion is reduced.
+  var out = document.querySelector('.typed'), names = [].map.call(document.querySelectorAll('.events li'), function (l) { return l.textContent; });
+  if (out && !calm && names.length) {
+    var i = 0, n = 0, erasing = false, seen = true;
+    new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(out);
+    (function tick() {
+      if (!seen || document.hidden) return setTimeout(tick, 400);
+      var s = names[i];
+      if (!erasing) {
+        out.textContent = s.slice(0, ++n);
+        if (n === s.length) { erasing = true; return setTimeout(tick, 1800); }
+        return setTimeout(tick, 42 + Math.random() * 38);
+      }
+      out.textContent = s.slice(0, --n);
+      if (n === 0) { erasing = false; i = (i + 1) % names.length; return setTimeout(tick, 380); }
+      setTimeout(tick, 16);
+    })();
   }
 })();
 </script>
