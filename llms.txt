@@ -1,6 +1,8 @@
 # Shashank Chinchli
-> Senior Solutions Architect at GitLab, former AWS Solutions Architect and Technical Trainer. 14+ years in cloud, security, GenAI and DevSecOps. Mentors aspiring Solutions Architects; keynote and workshop speaker.
+> Senior Solutions Architect at GitLab, ex-AWS. AWS Community Builder (AI), AWS User Group Leader in Indore, AWS Golden Jacket holder with 14 AWS certifications earned (12 active, verifiable on Credly). Mentors aspiring Solutions Architects; keynote and workshop speaker.
 
-- [Home](https://schinchli.github.io/): experience, speaking record, mentoring, writing, open source, credentials
+- [Home](https://schinchli.github.io/): about, experience, speaking record, mentoring, writing, videos, open source, credentials
+- [Resume (PDF)](https://schinchli.github.io/resume.pdf)
+- [Credly](https://www.credly.com/users/shashank-chinchli)
 - [Book mentoring or a speaking call](https://topmate.io/heyshashank/)
 - [LinkedIn](https://www.linkedin.com/in/shashankk/)

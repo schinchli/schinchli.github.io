@@ -1,32 +1,43 @@
-/* Option C: Noir Garnet and Copper, Manrope. Dark only, calmer motion. */
+/* Noir Garnet and Copper, Manrope. Dark only. Layered garnet, aubergine and copper gradients. */
 @font-face{font-family:Manrope;src:url(../fonts/manrope-latin.woff2) format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
 :root{color-scheme:dark;
   --font:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --bg:#0d0a0c;--alt-a:#120d10;--alt-b:#1b1116;--surface:#171014;--text:#f8f0ea;--muted:#d0c0b8;--soft:#aa9990;--line:#34242b;
+  --bg:#0a0709;--alt-a:#0f0a0d;--alt-b:#180e14;--surface:#150e12;--text:#f8f0ea;--muted:#d0c0b8;--soft:#a99890;--line:#31212a;
   --accent:#eaa27c;--accent-h:#f6bd9b;--on-accent:#1b0d0f;--gold:#f0b690;--gold-h:#f8cdb0;
-  --btn-grad:linear-gradient(135deg,#f7c7a6,#e08b64);
-  --hero-a:#0d0a0c;--hero-b:#2a0b16;--hero-c:#5a1424;--glow:rgba(224,82,122,.3);
-  --panel-a:#2b0c18;--panel-b:#59152a;--panel-c:#8a2a2f;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow:0 1px 2px rgba(0,0,0,.5),0 26px 50px -26px rgba(0,0,0,.9);
-  --fs-md:1.0625rem;--fs-lg:1.3rem;--fs-num:2.25rem}
+  --btn-grad:linear-gradient(135deg,#f8cfb0,#e48f68);
+  --hero-a:#0a0709;--hero-b:#240a15;--hero-c:#4d1426;--glow:rgba(222,84,124,.30);
+  --panel-a:#210a14;--panel-b:#4a1224;--panel-c:#7c2230;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow:0 1px 2px rgba(0,0,0,.5),0 28px 54px -28px rgba(0,0,0,.95);
+  --fs-md:1.0625rem;--fs-lg:1.3rem;--fs-num:2.5rem}
+body{background-color:var(--bg)}
 .navbar-toggler-icon{filter:invert(1)}
-h1{font-weight:800;letter-spacing:-.045em}
-h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.site-nav{background:linear-gradient(180deg,rgba(12,8,10,.94),rgba(18,10,14,.8))}
+h1{font-weight:800;letter-spacing:-.045em;font-size:clamp(2.8rem,6.2vw,5rem)}
+h2{font-weight:700;letter-spacing:-.03em;font-size:clamp(1.9rem,3.6vw,2.9rem)}
+.prose p.lede{font-size:1.35rem;line-height:1.5}
+
+/* hero: four gradient layers plus light streaks and grain */
 .hero{position:relative;overflow:hidden;isolation:isolate;background:
-  radial-gradient(70% 100% at 88% -10%,var(--glow),transparent 60%),
-  radial-gradient(60% 90% at 4% 110%,rgba(176,57,47,.38),transparent 60%),
-  linear-gradient(135deg,var(--hero-a) 0%,var(--hero-b) 55%,var(--hero-c) 100%)}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(115deg,rgba(240,182,144,.06) 0 1px,transparent 1px 56px);-webkit-mask-image:linear-gradient(90deg,transparent 10%,#000 70%);mask-image:linear-gradient(90deg,transparent 10%,#000 70%)}
+  radial-gradient(60% 90% at 92% -8%,var(--glow),transparent 62%),
+  radial-gradient(55% 80% at 2% 8%,rgba(92,32,110,.34),transparent 62%),
+  radial-gradient(70% 90% at 30% 118%,rgba(214,120,80,.2),transparent 60%),
+  linear-gradient(165deg,var(--hero-a) 0%,var(--hero-b) 48%,var(--hero-c) 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(115deg,rgba(240,182,144,.06) 0 1px,transparent 1px 56px);-webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 75%);mask-image:linear-gradient(90deg,transparent 15%,#000 75%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.07;mix-blend-mode:overlay;pointer-events:none}
-.portrait{border-color:rgba(240,182,144,.6)}
+.portrait{border-color:rgba(240,182,144,.55)}
+
+/* surfaces */
+.card{--bs-card-bg:rgba(255,255,255,.035);--bs-card-border-color:rgba(240,182,144,.14)}
+.widget{border:1px solid transparent;background:linear-gradient(180deg,#1a1116,#120b0f) padding-box,linear-gradient(145deg,rgba(240,182,144,.55),rgba(122,30,52,.4) 45%,rgba(240,182,144,.14)) border-box}
 .stat strong{color:var(--accent)}
-.widget{background:linear-gradient(180deg,#1a1116,#150e12)}
-.board{background:#0a0608;border-color:rgba(240,182,144,.32)}
-.board .c{background:linear-gradient(#2d141c 50%,#220f16 50%)}
-#mentoring{border-top:0;background:radial-gradient(70% 120% at 100% 0%,rgba(224,82,122,.22),transparent 60%),linear-gradient(135deg,#1c0a12,#3a0f20 60%,#5a1a2a)}
-#mentoring h2,#mentoring .card-title{color:#fff}
-#mentoring .intro,#mentoring .note{color:#e6d6cf}
-#mentoring .note a{color:var(--gold-h)}
-#mentoring .card{--bs-card-bg:rgba(255,255,255,.05);--bs-card-border-color:rgba(240,182,144,.22);--bs-card-title-color:#fff;--bs-card-color:#f1e4dd;backdrop-filter:blur(6px)}
-#mentoring .card-text{color:#e6d6cf}
-.panel{background:radial-gradient(70% 110% at 100% 0%,rgba(240,182,144,.24),transparent 55%),radial-gradient(60% 90% at 0% 100%,rgba(224,82,122,.22),transparent 60%),linear-gradient(135deg,var(--panel-a),var(--panel-b) 58%,var(--panel-c))}
+.block.alt{background:radial-gradient(70% 55% at 50% 0%,rgba(122,30,52,.18),transparent 70%),linear-gradient(180deg,var(--alt-a),var(--alt-b))}
+.board{background:#080507;border-color:rgba(240,182,144,.32)}
+.board .c{background:linear-gradient(#2d141c 50%,#210e15 50%)}
+.spot{border-top:0;background:radial-gradient(70% 120% at 100% 0%,rgba(224,82,122,.24),transparent 60%),radial-gradient(60% 90% at 0% 100%,rgba(92,32,110,.28),transparent 60%),linear-gradient(135deg,#190912,#380e1f 58%,#58182a)}
+.spot h2,.spot .card-title{color:#fff}
+.spot .intro,.spot .note{color:#e8d8d1}
+.spot .note a{color:var(--gold-h)}
+.spot .card{--bs-card-bg:rgba(255,255,255,.055);--bs-card-border-color:rgba(240,182,144,.24);--bs-card-title-color:#fff;--bs-card-color:#f1e4dd;backdrop-filter:blur(6px)}
+.spot .card-text{color:#e8d8d1}
+.panel{border:1px solid transparent;background:radial-gradient(70% 110% at 100% 0%,rgba(240,182,144,.24),transparent 55%),radial-gradient(60% 90% at 0% 100%,rgba(224,82,122,.22),transparent 60%),linear-gradient(135deg,var(--panel-a),var(--panel-b) 58%,var(--panel-c)) padding-box,linear-gradient(145deg,rgba(240,182,144,.5),rgba(240,182,144,.08)) border-box}
+footer.site{background:linear-gradient(180deg,transparent,rgba(74,18,36,.2))}

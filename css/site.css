@@ -1,5 +1,4 @@
 /* Layered on Bootstrap 5.3: tokens, gradients, and component skins. One family (Geist), one type scale, one radius. */
-@font-face{font-family:Geist;src:url(../fonts/geist-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
 
 :root{
   --bg:#faf8fd;--alt-a:#f5f0fb;--alt-b:#ebe3f6;--surface:#fff;
@@ -75,9 +74,9 @@ h3{font-size:var(--fs-md);letter-spacing:-.01em;line-height:1.35}
   radial-gradient(90% 120% at 90% -10%,var(--glow),transparent 60%),
   radial-gradient(70% 90% at 0% 105%,rgba(106,47,168,.4),transparent 60%),
   linear-gradient(135deg,var(--hero-a) 0%,var(--hero-b) 55%,var(--hero-c) 100%)}
-.role-line{color:var(--gold-h);font-size:var(--fs-md);font-weight:500;margin-bottom:1.1rem}
+.role-line{color:var(--gold-h);font-size:var(--fs-lg);font-weight:500;margin:1rem 0 0}
 h1{font-size:clamp(2.6rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;color:#fff}
-.sub{font-size:var(--fs-lg);color:#e2d7ee;max-width:34rem;margin-top:1.4rem;line-height:1.6}
+.sub{font-size:var(--fs-md);color:#e2d7ee;max-width:32rem;margin-top:1.25rem;line-height:1.65}
 .actions{margin-top:2rem}
 .portrait{display:block;width:100%;max-width:340px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid rgba(224,184,115,.55);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
 .hero :focus-visible{outline-color:var(--gold)}
@@ -257,3 +256,19 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
 #experience .entries>.entry:first-child{background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%);box-shadow:inset 3px 0 0 var(--accent)}
 #experience .entries>.entry:first-child h3{font-size:var(--fs-lg)}
 .year>h3{display:inline-block;padding:.25rem .75rem;border-radius:var(--r);background:color-mix(in srgb,var(--accent) 10%,transparent);color:var(--text);font-weight:600}
+
+/* structure: sub-sections inside a section, uniform rhythm */
+.subsec{margin-top:clamp(64px,8vw,96px)}
+.subsec.first{margin-top:clamp(40px,5vw,56px)}
+.sub-h{font-size:var(--fs-lg);font-weight:700;letter-spacing:-.02em}
+.subsec>.intro{margin-top:.75rem}
+
+/* recognition row in the hero, and the optional moment photo */
+.creds-row{list-style:none;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.creds-row li{padding:.55rem .9rem;border-radius:var(--r);border:1px solid rgba(224,184,115,.35);background:rgba(255,255,255,.06);font-size:var(--fs-xs);color:#e8dcf0;line-height:1.35}
+.creds-row strong{display:block;color:var(--gold-h);font-size:var(--fs-sm);font-weight:700}
+.moment{margin:2rem 0 0;max-width:30rem}
+.moment img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.moment figcaption{margin-top:.6rem;color:var(--soft);font-size:var(--fs-xs)}
+
+footer.site a{color:var(--accent)}
