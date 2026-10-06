@@ -267,8 +267,8 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
 .creds-row{list-style:none;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
 .creds-row li{padding:.55rem .9rem;border-radius:var(--r);border:1px solid rgba(224,184,115,.35);background:rgba(255,255,255,.06);font-size:var(--fs-xs);color:#e8dcf0;line-height:1.35}
 .creds-row strong{display:block;color:var(--gold-h);font-size:var(--fs-sm);font-weight:700}
-.moment{margin:2rem 0 0;max-width:30rem}
-.moment img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.moment{margin:2rem 0 0;max-width:22rem}
+.moment img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
 .moment figcaption{margin-top:.6rem;color:var(--soft);font-size:var(--fs-xs)}
 
 footer.site a{color:var(--accent)}
