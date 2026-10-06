@@ -263,12 +263,20 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
 .sub-h{font-size:var(--fs-lg);font-weight:700;letter-spacing:-.02em}
 .subsec>.intro{margin-top:.75rem}
 
-/* recognition row in the hero, and the optional moment photo */
-.creds-row{list-style:none;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
-.creds-row li{padding:.55rem .9rem;border-radius:var(--r);border:1px solid rgba(224,184,115,.35);background:rgba(255,255,255,.06);font-size:var(--fs-xs);color:#e8dcf0;line-height:1.35}
-.creds-row strong{display:block;color:var(--gold-h);font-size:var(--fs-sm);font-weight:700}
 .moment{margin:2rem 0 0;max-width:22rem}
 .moment img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
 .moment figcaption{margin-top:.6rem;color:var(--soft);font-size:var(--fs-xs)}
 
 footer.site a{color:var(--accent)}
+
+/* hero introduction: prose first, one button, inline links */
+.hero-intro{max-width:38rem;margin-top:1.5rem}
+.hero-intro p{color:#eadff0;font-size:var(--fs-md);line-height:1.7}
+.hero-intro p+p{margin-top:1rem}
+.hero-intro a{color:var(--gold-h);text-decoration-color:rgba(248,205,176,.5)}
+.hero-intro a:hover{color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.75rem;margin-top:2rem}
+.textlink{color:#f4e6dc;font-size:var(--fs-sm);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(240,182,144,.45);padding-bottom:2px}
+.textlink::after{content:"\2192";margin-left:.4em;display:inline-block;transition:transform .15s}
+.textlink:hover{color:#fff;border-color:#fff}
+.textlink:hover::after{transform:translateX(3px)}
