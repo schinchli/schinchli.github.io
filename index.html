@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shashank Chinchli · Solutions Architect, Mentor &amp; Speaker</title>
 <meta name="description" content="Shashank Chinchli is a Senior Solutions Architect at GitLab and former AWS Solutions Architect with 14+ years in cloud, security, GenAI and DevSecOps. Book 1:1 Solutions Architect mentoring, or invite him to keynote or run a workshop at your event.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-cpwPXY0DR2MMABk3o61Wfatmbha7XMdVX2IqIdKWDGE='; style-src 'sha256-hS3qr3LiVkyzeONIvWY95BCyIoJBwrcpEAMSSqMJ7Fg='; font-src 'self'; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' 'sha256-2cZ5BaWyQJM/R5py1US+/mBXj4HNnAgTKVuoTHqM78E='; style-src 'sha256-uNuCbQakr6bC6+Hw3HtQ0P4PrpLdQCK5L6R2keNzEUg='; font-src 'self'; img-src 'self' data: https://i.ytimg.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="author" content="Shashank Chinchli">
 <meta name="color-scheme" content="light dark">
@@ -179,8 +179,8 @@
 
 <script>document.documentElement.classList.add('js')</script>
 <style>@font-face{font-family:Geist;src:url(fonts/geist-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
-:root{--bg:#fbfafc;--alt:#f4f1f7;--text:#1d1625;--muted:#5b5266;--soft:#766d82;--line:#e5dfec;--accent:#5b2a86;--accent-h:#45206a;--on-accent:#fff;--gold:#d6b06b;--hero:#1e0f2d;--panel:#2a1340;--r:8px;--w:1120px;--gut:clamp(20px,4vw,40px);--fs-xs:.875rem;--fs-sm:.95rem;--fs-md:1.05rem;--fs-lg:1.25rem;--fs-num:2rem}
-@media (prefers-color-scheme:dark){:root{--bg:#0f0b14;--alt:#15101c;--text:#efeaf4;--muted:#b0a6bd;--soft:#9186a0;--line:#2a2233;--accent:#d6b06b;--accent-h:#e6c78d;--on-accent:#1a1020;--hero:#170b22;--panel:#241038}}
+:root{--bg:#fbfafc;--alt:#f4f1f7;--text:#1d1625;--muted:#5b5266;--soft:#766d82;--line:#e5dfec;--accent:#5b2a86;--accent-h:#45206a;--on-accent:#fff;--gold:#d6b06b;--hero:#1e0f2d;--surface:#fff;--shadow:0 1px 2px rgba(42,19,64,.06),0 22px 44px -26px rgba(42,19,64,.45);--panel:#2a1340;--r:8px;--w:1120px;--gut:clamp(20px,4vw,40px);--fs-xs:.875rem;--fs-sm:.95rem;--fs-md:1.05rem;--fs-lg:1.25rem;--fs-num:2rem}
+@media (prefers-color-scheme:dark){:root{--bg:#0f0b14;--alt:#15101c;--text:#efeaf4;--muted:#b0a6bd;--soft:#9186a0;--line:#2a2233;--accent:#d6b06b;--accent-h:#e6c78d;--on-accent:#1a1020;--hero:#170b22;--panel:#241038;--surface:#17111f;--shadow:0 1px 2px rgba(0,0,0,.4),0 22px 44px -26px rgba(0,0,0,.8)}}
 *{box-sizing:border-box}
 html{scroll-padding-top:80px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Geist,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-optical-sizing:auto;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -221,7 +221,7 @@ nav a.active{font-weight:500}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
 
 /* hero */
-.hero{background:var(--hero);color:#f4eef9;padding:96px 0 88px;border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent)}
+.hero{background:var(--hero);color:#f4eef9;padding:96px 0 144px;border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent)}
 .hero-grid{display:grid;grid-template-columns:1fr 340px;gap:72px;align-items:center}
 .role-line{color:var(--gold);font-size:var(--fs-md);font-weight:500;margin-bottom:1.1rem}
 h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;color:#fff}
@@ -233,18 +233,23 @@ h1{font-size:clamp(2.7rem,6vw,4.5rem);letter-spacing:-.04em;line-height:1.02;col
 .hero :focus-visible{outline-color:var(--gold)}
 .portrait{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid color-mix(in srgb,var(--gold) 55%,transparent)}
 
-/* glance */
-.glance{border-top:1px solid var(--line)}
-.glance-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.glance-grid>div{padding:28px 24px 28px 0}
-.glance-grid>div+div{padding-left:24px;border-left:1px solid var(--line)}
-.glance strong{display:block;font-size:var(--fs-num);font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
-.glance span{color:var(--muted);font-size:var(--fs-sm);display:block;max-width:18rem}
-
+/* widgets: stacked cards that overlap the hero */
+.widgets{position:relative;z-index:2;margin-top:-72px}
+.widget-grid{display:grid;grid-template-columns:5fr 7fr;gap:24px;align-items:stretch}
+.widget{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:28px}
+.wtitle{margin:0 0 1.25rem;font-size:var(--fs-xs);font-weight:500;color:var(--soft);letter-spacing:0}
+.stat-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;margin:0 -28px -28px;border-top:1px solid var(--line)}
+.stat{padding:24px 28px;display:flex;flex-direction:column;gap:.4rem;justify-content:flex-start}
+.stat:nth-child(odd){border-right:1px solid var(--line)}
+.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.stat strong{font-size:var(--fs-num);font-weight:600;letter-spacing:-.03em;line-height:1.1;color:var(--text);font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:var(--fs-xs);line-height:1.5;max-width:15rem}
+.flights{container-type:inline-size}
+.wlink{margin-top:auto;padding-top:1.25rem;font-size:var(--fs-sm);font-weight:500;text-decoration:none}
+.wlink::after{content:"\2192";margin-left:.35em;display:inline-block;transition:transform .15s}
+.wlink:hover::after{transform:translateX(3px)}
 /* events, split-flap board */
-.spoken{border-top:1px solid var(--line);padding:48px 0 56px}
-.spoken .lbl{display:block;color:var(--soft);font-size:var(--fs-sm);margin-bottom:1rem}
-.board{--cw:min(32px,calc((100vw - 2*var(--gut) - 75px)/18));display:inline-flex;flex-direction:column;gap:6px;padding:12px;border-radius:var(--r);background:#150a20;border:1px solid rgba(214,176,107,.28);max-width:100%}
+.board{--cw:min(34px,calc((100cqw - 24px - 51px)/18));display:flex;flex-direction:column;gap:6px;margin:auto;padding:12px;border-radius:var(--r);background:#150a20;border:1px solid rgba(214,176,107,.28);max-width:100%}
 .board .ln{display:flex;gap:3px}
 .board .c{position:relative;display:block;width:var(--cw);height:calc(var(--cw)*1.5);border-radius:3px;background:linear-gradient(#34194f 50%,#281340 50%);color:var(--gold);font-weight:600;font-size:calc(var(--cw)*.74);line-height:calc(var(--cw)*1.5);text-align:center;perspective:200px;overflow:hidden}
 .board .c::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.6)}
@@ -327,7 +332,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
 .social a:hover{color:var(--text)}
 
 @media (max-width:900px){
-  .hero{padding:56px 0}
+  .hero{padding:56px 0 96px}
   .menu{display:block}
   nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:12px 24px 20px}
   nav.open{display:flex}
@@ -335,9 +340,8 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
   nav .btn{margin:.5rem 0}
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .portrait{max-width:300px;order:-1}
-  .glance-grid{grid-template-columns:repeat(2,1fr)}
-  .glance-grid>div:nth-child(3){padding-left:0;border-left:0}
-  .glance-grid>div:nth-child(n+3){border-top:1px solid var(--line)}
+  .widgets{margin-top:-48px}
+  .widget-grid{grid-template-columns:1fr}
   .block{padding:72px 0}
   .cols4,.cols3,.domains{grid-template-columns:repeat(2,1fr)}
   .split,.panel{grid-template-columns:1fr;gap:40px}
@@ -356,7 +360,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:var(--
   .board{display:none}
   .js .events{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;margin:.75rem 0 0}
 }
-@media print{header.site,.spoken,.chips,.panel,.top,#progress{display:none}.hero{background:none;color:#000;padding:24px 0}h1,.sub,.role-line{color:#000}}
+@media print{header.site,.flights,.chips,.panel,.top,#progress{display:none}.hero{background:none;color:#000;padding:24px 0}h1,.sub,.role-line{color:#000}}
 
 /* stack */
 .stack{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;list-style:none;margin:2.5rem 0 0;padding:0}
@@ -441,6 +445,8 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
 .js .tabpanel:not([hidden]){animation:panel .35s ease both}
 @keyframes panel{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.tab{transition:none}.js .tabpanel:not([hidden]){animation:none}.js .rv{transition-duration:0s!important}}
+
+@media (max-width:620px){.widget{padding:20px}.stat-grid{margin:0 -20px -20px}.stat{padding:18px 20px}.stat strong{font-size:1.6rem}}
 </style>
 </head>
 <body>
@@ -471,20 +477,23 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
   </div>
 </section>
 
-<section class="glance" aria-label="At a glance">
-  <div class="wrap glance-grid">
-    <div><strong>14+ years</strong><span>in cloud, security and platform engineering</span></div>
-    <div><strong>30+</strong><span>talks, workshops and webcasts</span></div>
-    <div><strong>12</strong><span>active AWS certifications, all 13 earned, Golden Jacket</span></div>
-    <div><strong>4.8 / 5</strong><span>CSAT as an AWS Authorized Instructor</span></div>
-  </div>
-</section>
-
-<section class="spoken" aria-label="Events where Shashank has spoken">
-  <div class="wrap">
-    <span class="lbl">Has spoken at</span>
-    <div class="board" aria-hidden="true"></div>
-    <ul class="events"><li>AWS Summit Bengaluru</li><li>AWS Summit Mumbai</li><li>AWS Summit 2025, Developer Lounge</li><li>AWS Community Day Bengaluru</li><li>AWS Community Day Mumbai</li><li>AWS Community Day Hyderabad</li><li>AWS Community Day Vadodara</li><li>AWS Community Day Nashik</li><li>GitLab APAC webcasts</li><li>AWS User Group Indore</li><li>AWS User Group Bhopal</li><li>AWS User Group Mumbai</li><li>YugabyteDB User Group Bangalore</li><li>AWS UG Women in Tech Nepal</li><li>BeSA Cloud Academy</li><li>AI for Bharat</li><li>AWS Cloud Club CHARUSAT</li><li>WordPress Thane meetup</li></ul>
+<section class="widgets" aria-label="Highlights">
+  <div class="wrap widget-grid">
+    <div class="widget">
+      <h2 class="wtitle">At a glance</h2>
+      <div class="stat-grid">
+        <div class="stat"><strong>14+ years</strong><span>in cloud, security and platform engineering</span></div>
+        <div class="stat"><strong>30+</strong><span>talks, workshops and webcasts</span></div>
+        <div class="stat"><strong>12</strong><span>active AWS certifications, all 13 earned, Golden Jacket</span></div>
+        <div class="stat"><strong>4.8 / 5</strong><span>CSAT as an AWS Authorized Instructor</span></div>
+      </div>
+    </div>
+    <div class="widget flights" aria-label="Events where Shashank has spoken">
+      <h2 class="wtitle">Has spoken at</h2>
+      <div class="board" aria-hidden="true"></div>
+      <ul class="events"><li>AWS Summit Bengaluru</li><li>AWS Summit Mumbai</li><li>AWS Summit 2025, Developer Lounge</li><li>AWS Community Day Bengaluru</li><li>AWS Community Day Mumbai</li><li>AWS Community Day Hyderabad</li><li>AWS Community Day Vadodara</li><li>AWS Community Day Nashik</li><li>GitLab APAC webcasts</li><li>AWS User Group Indore</li><li>AWS User Group Bhopal</li><li>AWS User Group Mumbai</li><li>YugabyteDB User Group Bangalore</li><li>AWS UG Women in Tech Nepal</li><li>BeSA Cloud Academy</li><li>AI for Bharat</li><li>AWS Cloud Club CHARUSAT</li><li>WordPress Thane meetup</li></ul>
+      <a class="wlink" href="#speaking">See all talks and workshops</a>
+    </div>
   </div>
 </section>
 
@@ -719,7 +728,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
   // reveal on scroll, once
   if ('IntersectionObserver' in window && !calm) {
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.block h2, .block .intro, .prose > *, .tabs, .rows > .row, .cols4 > div, .cols3 > div, .cols3 > a, .cols2 > div, .domains > div, .panel, .stack li, .line, .feature > *, .year > h3, .chips').forEach(function (el) {
+    document.querySelectorAll('.block h2, .block .intro, .prose > *, .tabs, .rows > .row, .cols4 > div, .cols3 > div, .cols3 > a, .cols2 > div, .domains > div, .panel, .widget, .stack li, .line, .feature > *, .year > h3, .chips').forEach(function (el) {
       var i = [].indexOf.call(el.parentNode.children, el); el.style.setProperty('--i', Math.min(i, 5)); el.classList.add('rv'); io.observe(el);
     });
     // count-up for the at-a-glance numbers
@@ -729,7 +738,7 @@ nav a.active::after,nav a:not(.btn):hover::after{transform:scaleX(1)}
       var end = parseFloat(m[1]), dec = (m[1].split('.')[1] || '').length, t0 = performance.now();
       (function step(t) { var p = Math.min(1, (t - t0) / 900), v = end * (1 - Math.pow(1 - p, 3)); el.textContent = v.toFixed(dec) + m[2]; if (p < 1) requestAnimationFrame(step); })(t0);
     }); }, { threshold: 1 });
-    document.querySelectorAll('.glance strong').forEach(function (el) { cio.observe(el); });
+    document.querySelectorAll('.stat strong').forEach(function (el) { cio.observe(el); });
   }
 
   // split-flap board: each tile flips through a few characters, lands on the event name, holds, then moves on.
