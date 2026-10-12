@@ -38,7 +38,7 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15;text-wr
 h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.03em;max-width:24ch}
 h3{font-size:var(--fs-md);letter-spacing:-.01em;line-height:1.35}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.container{max-width:var(--w);--bs-gutter-x:clamp(40px,8vw,80px)}
+.container{max-width:var(--w);--bs-gutter-x:clamp(48px,8vw,80px)}
 .skip{position:absolute;left:12px;top:-4rem;z-index:2000;background:var(--accent);color:var(--on-accent);padding:.5rem 1rem;border-radius:var(--r)}
 .skip:focus{top:12px;color:var(--on-accent)}
 .soft{color:var(--soft)}
