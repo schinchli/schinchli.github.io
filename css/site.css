@@ -284,3 +284,5 @@ footer.site a{color:var(--accent)}
 .hero-intro{max-width:40rem}
 .hero-intro p:first-child{font-size:var(--fs-lg);line-height:1.55;color:#fff;letter-spacing:-.005em}
 .hero-intro strong{color:var(--gold-h);font-weight:700}
+
+.intro.proof{margin-top:.9rem;color:var(--text)}
