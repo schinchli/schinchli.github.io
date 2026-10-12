@@ -280,3 +280,7 @@ footer.site a{color:var(--accent)}
 .textlink::after{content:"\2192";margin-left:.4em;display:inline-block;transition:transform .15s}
 .textlink:hover{color:#fff;border-color:#fff}
 .textlink:hover::after{transform:translateX(3px)}
+
+.hero-intro{max-width:40rem}
+.hero-intro p:first-child{font-size:var(--fs-lg);line-height:1.55;color:#fff;letter-spacing:-.005em}
+.hero-intro strong{color:var(--gold-h);font-weight:700}
