@@ -6,7 +6,16 @@
 
   // close the mobile menu after choosing a link (Bootstrap collapse)
   nav.addEventListener('click', function (e) {
-    if (e.target.closest('a') && nav.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(nav).hide();
+    var link = e.target.closest('a');
+    if (!link || !(nav.classList.contains('show') || nav.classList.contains('collapsing'))) return;
+    var collapse = bootstrap.Collapse.getOrCreateInstance(nav);
+    nav.addEventListener('hidden.bs.collapse', function () {
+      var target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }, { once: true });
+    if (nav.classList.contains('collapsing')) {
+      nav.addEventListener('shown.bs.collapse', function () { collapse.hide(); }, { once: true });
+    } else collapse.hide();
   });
 
   // topic filter for talks. ponytail: keyword inference over entry text; add data-tags if topics get fuzzy.

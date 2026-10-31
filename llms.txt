@@ -1,8 +1,13 @@
 # Shashank Chinchli
-> Senior Solutions Architect at GitLab, ex-AWS. AWS Community Builder (AI), AWS User Group Leader in Indore, AWS Golden Jacket holder with 14 AWS certifications earned (12 active, verifiable on Credly). Mentors aspiring Solutions Architects; keynote and workshop speaker.
+> Senior Solutions Architect at GitLab, formerly AWS and KPMG. Enterprise cloud architecture, DevSecOps, cloud security and secure agentic AI. Based in Bengaluru, India; works with teams across India and ASEAN.
 
-- [Home](https://schinchli.github.io/): about, experience, speaking record, mentoring, writing, videos, open source, credentials
+- [Architecture practice](https://schinchli.github.io/#architecture): cloud platforms, enterprise DevSecOps and secure AI
+- [Engineering projects](https://schinchli.github.io/#projects): AWS SOW Validator and Strands Calendar Agent; educational reference implementations
+- [AWS contributions](https://schinchli.github.io/#aws-contributions): AWS Blog co-author, former trainer and architect, Community Builder (AI), AWS User Group Leader Indore, open-source contributor
+- [Experience](https://schinchli.github.io/#experience)
+- [Writing and open source](https://schinchli.github.io/#writing)
+- [Speaking](https://schinchli.github.io/#speaking)
 - [Resume (PDF)](https://schinchli.github.io/resume.pdf)
-- [Credly](https://www.credly.com/users/shashank-chinchli)
-- [Book mentoring or a speaking call](https://topmate.io/heyshashank/)
+- [Verified credentials and validity](https://www.credly.com/users/shashank-chinchli)
 - [LinkedIn](https://www.linkedin.com/in/shashankk/)
+- [Mentoring](https://topmate.io/heyshashank/)
