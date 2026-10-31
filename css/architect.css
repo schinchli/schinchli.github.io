@@ -238,3 +238,19 @@ h3{line-height:1.4}
 @media(prefers-reduced-motion:reduce){.editorial-feature{transition:none}}
 @media print{.article-toc{display:none}.article-shell{display:block}.article-hero,.article-copy pre,.article-callout{background:#fff;color:#000}.article-copy p,.article-copy li,.article-copy h2,.article-hero h1{color:#000}}
 @media screen{.hero{position:relative;isolation:isolate;overflow:hidden}.hero::before{display:block;content:'';position:absolute;inset:0;z-index:-1;pointer-events:none}}
+/* A compact, factual introduction: role, credentials, community, work. */
+.hero{padding-top:56px}
+.hero .role-line{margin-top:16px}
+.hero-credentials{display:flex;flex-wrap:wrap;gap:8px 0;align-items:center;margin-top:18px;font-size:.88rem;font-weight:600;color:#f5d0b7;line-height:1.5}
+.hero-credentials>*{padding:0 14px;border-left:1px solid #c9958559}
+.hero-credentials>:first-child{padding-left:0;border-left:0}
+.hero-credentials a{color:#f5d0b7;text-decoration-color:#d5a48766}
+.hero-community{font-size:.82rem;line-height:1.8;color:#d9bdcb;margin-top:12px;max-width:65ch}
+.hero-community>span{margin:0 6px}
+.hero-intro{margin-top:24px}
+.hero-intro p:first-child{font-size:clamp(1.25rem,1.9vw,1.55rem);line-height:1.4;max-width:34ch}
+.hero-intro p+p{margin-top:12px}
+.hero-scroll{margin-top:20px;max-width:60ch;font-size:.8rem;color:#c4aab9;line-height:1.7}
+.hero .trust-strip{margin-top:36px}
+.profile-frame figcaption{font-size:1rem;letter-spacing:-.015em;line-height:1.6}
+@media(max-width:767.98px){.hero{padding-top:32px}.hero-credentials{font-size:.8rem;gap:8px 0}.hero-credentials>*{padding:0 10px}.hero-community{font-size:.8rem}.hero-intro p:first-child{font-size:1.3rem}.hero-intro p{font-size:.94rem}.hero .trust-strip{margin-top:28px}.hero-scroll{font-size:.8rem}.hero .profile-frame{padding:10px;gap:16px}.profile-frame .portrait{width:64px;height:64px}.profile-frame figcaption{font-size:.86rem}}

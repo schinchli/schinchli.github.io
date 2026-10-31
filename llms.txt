@@ -3,7 +3,7 @@
 
 - [Architecture practice](https://schinchli.github.io/#architecture): cloud platforms, enterprise DevSecOps and secure AI
 - [Engineering projects](https://schinchli.github.io/#projects): AWS SOW Validator and Strands Calendar Agent; educational reference implementations
-- [AWS contributions](https://schinchli.github.io/#aws-contributions): AWS Blog co-author, former trainer and architect, Community Builder (AI), AWS User Group Leader Indore, open-source contributor
+- [AWS contributions](https://schinchli.github.io/#aws-contributions): AWS Blog co-author, former trainer and architect, Community Builder (AI), AWS User Group Indore Co-lead, open-source contributor
 - [Experience](https://schinchli.github.io/#experience)
 - [Writing and open source](https://schinchli.github.io/#writing)
 - [Speaking](https://schinchli.github.io/#speaking)
@@ -13,3 +13,5 @@
 - [Mentoring](https://topmate.io/heyshashank/)
 
 - [Architecture note: enforce calendar rules in code](https://schinchli.github.io/writing/reliable-ai-tools/): implementation, tradeoffs and validation for AI agent tools
+
+Credentials: 13x AWS Certified, GCP and Azure certifications, CCSP. See linked credential pages for validity.
