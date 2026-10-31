@@ -11,3 +11,5 @@
 - [Verified credentials and validity](https://www.credly.com/users/shashank-chinchli)
 - [LinkedIn](https://www.linkedin.com/in/shashankk/)
 - [Mentoring](https://topmate.io/heyshashank/)
+
+- [Architecture note: enforce calendar rules in code](https://schinchli.github.io/writing/reliable-ai-tools/): implementation, tradeoffs and validation for AI agent tools

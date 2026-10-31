@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enforce Calendar Rules in AI Agent Tools | Shashank Chinchli</title>
+<meta name="description" content="Design note: use typed tools and application checks to handle calendar conflicts with Strands Agents, Amazon Bedrock and SQLite. Includes tradeoffs and tests.">
+<meta name="author" content="Shashank Chinchli"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#170c19">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://schinchli.github.io/writing/reliable-ai-tools/">
+<meta property="og:type" content="article"><meta property="og:title" content="Enforce calendar rules in code when building an AI agent">
+<meta property="og:description" content="A practical architecture note on typed tools, conflict checks, tradeoffs and validation.">
+<meta property="og:url" content="https://schinchli.github.io/writing/reliable-ai-tools/"><meta property="og:image" content="https://schinchli.github.io/img/og.jpg">
+<meta property="og:image:alt" content="Shashank Chinchli, Senior Solutions Architect"><meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-latin.woff2" crossorigin>
+<link rel="stylesheet" href="/vendor/bootstrap.min.css"><link rel="stylesheet" href="/css/site.css?v=5d64859f"><link rel="stylesheet" href="/css/architect.css?v=4bd19d67">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Enforce calendar rules in code when building an AI agent","description":"A design note on typed tools, calendar conflict checks, tradeoffs and validation using Strands Agents, Amazon Bedrock and SQLite.","datePublished":"2026-10-31","dateModified":"2026-10-31","author":{"@type":"Person","name":"Shashank Chinchli","url":"https://schinchli.github.io/"},"mainEntityOfPage":"https://schinchli.github.io/writing/reliable-ai-tools/","image":"https://schinchli.github.io/img/og.jpg","inLanguage":"en"}
+</script>
+</head>
+<body>
+<a class="skip" href="#article">Skip to article</a>
+<nav class="site-nav sticky-top" aria-label="Primary"><div class="container d-flex align-items-center justify-content-between gap-3"><a class="navbar-brand" href="/">Shashank Chinchli</a><a class="textlink" href="/#writing">All writing</a></div></nav>
+<main id="article">
+<header class="article-hero"><div class="container"><p class="eyebrow">ARCHITECTURE NOTE / AGENTIC AI</p><h1>Enforce calendar rules in code when building an AI agent</h1><p class="intro">A calendar assistant needs to do more than understand a request. It must check whether the requested change is valid before it writes to storage. This example puts that decision in the tool.</p><p class="article-meta">Shashank Chinchli · <time datetime="2026-10-31">31 October 2026</time> · Strands Agents, Amazon Bedrock, TypeScript, SQLite</p></div></header>
+<div class="container article-shell">
+<aside class="article-toc" aria-label="In this article"><p>IN THIS ARTICLE</p><a href="#problem">The problem</a><a href="#design">The design</a><a href="#implementation">Implementation</a><a href="#tradeoffs">Tradeoffs</a><a href="#validation">Validation</a></aside>
+<article class="article-copy">
+<h2 id="problem">Start with the failure you need to prevent</h2>
+<p>A user asks an assistant to book a meeting at 3 p.m. Another appointment already occupies that time. The assistant should explain the conflict and offer alternatives. It should leave the calendar unchanged until the user chooses a valid time.</p>
+<p>A prompt can describe this behaviour, but the component that writes the appointment needs its own check. In my <a href="https://github.com/schinchli/strands-calendar-agent">Strands Calendar Agent reference project</a>, the application checks for overlapping appointments before creating or moving a booking.</p>
+<div class="article-callout"><p><strong>Design decision:</strong> use the model to interpret the request and explain the result. Use application code to check the scheduling rule.</p></div>
+<h2 id="design">Put the decision at the write boundary</h2>
+<p>The example uses Strands Agents with Amazon Bedrock for the conversation, TypeScript tools for calendar operations and SQLite for persistence. The create tool follows this sequence:</p>
+<ol><li>Validate the requested date format and duration.</li><li>Query stored appointments for overlapping time ranges.</li><li>If a conflict exists, return the conflicting appointments and up to three nearby available start times. Do not create a booking.</li><li>If the slot is available, create the appointment and return its identifier.</li></ol>
+<p>The update tool applies the same conflict check when the start time or duration changes. It excludes the appointment being moved from that check.</p>
+<h2 id="implementation">Return a result the agent can act on</h2>
+<p>The tool returns a structured conflict result with a status, the requested time, conflicting appointments and suggested alternatives. That gives the model concrete information to explain. The following pseudocode summarises the create path; it is not a copy-and-paste implementation.</p>
+<pre><code>validate(request)
+conflicts = findOverlappingAppointments(request)
+
+if conflicts exist:
+    return conflict(conflicts, nearestAvailableSlots(request))
+
+return createAppointment(request)</code></pre>
+<p>Suggested times come from calendar logic, within the configured working day. The model can present those times to the user without calculating availability itself. The <a href="https://github.com/schinchli/strands-calendar-agent/blob/main/src/tools/AppointmentTools.ts">tool implementation</a> contains the input schemas, overlap checks and response construction.</p>
+<h2 id="tradeoffs">State the limits of the example</h2>
+<p>This is a local reference application. It demonstrates a useful boundary, but the check-before-write flow alone does not establish a concurrency guarantee for a multi-user service. Two requests could both check a free slot before either writes. A deployed service needs an atomic reservation strategy appropriate to its database and transaction model.</p>
+<p>The cancellation tool also accepts a confirmation flag. That is useful for demonstrating a conversation flow, but a model-supplied Boolean is not independent evidence of user approval. For consequential actions, the application should record and validate approval outside the model’s arguments.</p>
+<p>Timezone handling, tenant isolation, authorisation and external calendar synchronisation need their own design and tests before adapting this pattern for a shared service.</p>
+<h2 id="validation">Test the rule separately from the conversation</h2>
+<p>The project includes <a href="https://github.com/schinchli/strands-calendar-agent/blob/main/test/calendar.test.ts">calendar rule and configuration tests</a>. For your own implementation, start with checks that do not depend on model output:</p>
+<ul><li>An overlapping create request leaves stored appointments unchanged.</li><li>A conflicting move preserves the original appointment.</li><li>Adjacent appointments follow the chosen interval boundary rule.</li><li>Suggested times fit the requested duration and working hours.</li><li>Invalid input fails before any mutation.</li></ul>
+<p>Then evaluate the conversation: does the assistant explain the conflict, use returned alternatives and ask the user to choose? For a shared service, add concurrent write tests and authorisation tests at the persistence boundary.</p>
+<p>Keeping these layers separate makes failures easier to diagnose. The model interprets intent. The tool checks the request. The persistence layer must enforce the guarantees the service promises.</p>
+<p class="source-note"><strong>Source and scope:</strong> based on the public <a href="https://github.com/schinchli/strands-calendar-agent">Strands Calendar Agent</a> educational project. The production considerations above are design recommendations, not claims about features implemented in the sample.</p>
+</article></div>
+</main>
+<footer class="site"><div class="container d-flex flex-wrap justify-content-between gap-3"><span>© 2026 Shashank Chinchli · Views are my own.</span><a href="/#writing">More architecture writing →</a></div></footer>
+</body></html>
