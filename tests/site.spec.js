@@ -9,7 +9,7 @@ test('page loads clean with key content', async ({ page }) => {
   await expect(page.locator('h1')).toContainText('Shashank Chinchli');
   await expect(page.locator('.role-line')).toContainText('GitLab');
   const intro = page.locator('.hero-intro');
-  for (const t of ['architecture reviews', 'DevSecOps', 'Amazon Bedrock']) {
+  for (const t of ['review architectures', 'DevSecOps', 'Amazon Bedrock']) {
     await expect(intro).toContainText(t);
   }
   expect(errors).toEqual([]);

@@ -254,3 +254,5 @@ h3{line-height:1.4}
 .hero .trust-strip{margin-top:36px}
 .profile-frame figcaption{font-size:1rem;letter-spacing:-.015em;line-height:1.6}
 @media(max-width:767.98px){.hero{padding-top:32px}.hero-credentials{font-size:.8rem;gap:8px 0}.hero-credentials>*{padding:0 10px}.hero-community{font-size:.8rem}.hero-intro p:first-child{font-size:1.3rem}.hero-intro p{font-size:.94rem}.hero .trust-strip{margin-top:28px}.hero-scroll{font-size:.8rem}.hero .profile-frame{padding:10px;gap:16px}.profile-frame .portrait{width:64px;height:64px}.profile-frame figcaption{font-size:.86rem}}
+
+@media(max-width:767.98px){.hero-credentials{gap:8px}.hero-credentials>*,.hero-credentials>:first-child{padding:4px 8px;border:1px solid #c9958545;border-radius:4px;background:#e5a27f08}}
